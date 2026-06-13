@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WORKS ｜ 株式会社3LYNX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* approach intro */
+.intro{padding:96px 0 40px}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.intro h2{font-family:"Shippori Mincho",serif;font-size:clamp(24px,3vw,38px);line-height:1.5;color:var(--ink)}
+.intro h2 .x{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(0,0,0,.25)}
+.intro h2 .o{color:var(--navy)}
+.intro h2 .arw{color:var(--gold);margin:0 10px}
+.intro p{font-size:15px;line-height:2.05;color:#3c4049}
+
+/* filters */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 36px}
+.filt{font-family:"Outfit";font-size:12.5px;letter-spacing:.04em;padding:10px 18px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);cursor:pointer;transition:.2s;white-space:nowrap}
+.filt:hover{border-color:var(--navy);color:var(--navy)}
+.filt.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* text cases */
+.cases{border:1px solid var(--line)}
+.case{background:#fff;padding:48px 46px}
+.case + .case{border-top:1px solid var(--line)}
+.case .ctop{display:flex;align-items:baseline;gap:18px;margin-bottom:14px;flex-wrap:wrap}
+.case .cno{font-family:"Outfit";font-size:13px;letter-spacing:.1em;color:var(--gold);white-space:nowrap}
+.case .ccat{font-family:"Outfit";font-size:11px;letter-spacing:.1em;color:#fff;background:var(--navy);padding:5px 11px;border-radius:999px}
+.case .cyr{font-family:"Outfit";font-size:11px;letter-spacing:.1em;color:var(--muted);margin-left:auto}
+.case .cind{font-family:"Shippori Mincho",serif;font-size:clamp(20px,2.2vw,28px);color:var(--ink);line-height:1.4;margin-bottom:30px}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;position:relative}
+.steps .step{position:relative}
+.step .k{font-family:"Outfit";font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.step .k .jp{font-family:"Shippori Mincho",serif;font-size:15px;letter-spacing:0;text-transform:none;color:var(--navy)}
+.step p{font-size:14px;line-height:1.9;color:#3c4049}
+.step.result .k{color:var(--navy)}
+.step.result p{color:var(--ink);font-weight:500}
+.steps .step:not(:last-child)::after{content:"→";position:absolute;top:28px;right:-22px;color:var(--line);font-size:18px}
+.case .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.case .tags span{font-family:"Outfit";font-size:11px;letter-spacing:.04em;padding:6px 11px;border:1px solid var(--line);border-radius:999px;color:var(--navy)}
+.emptynote{font-family:"Outfit";font-size:11px;color:var(--muted);letter-spacing:.04em;margin-top:24px;line-height:1.7}
+
+@media(max-width:900px){
+  .intro-grid{grid-template-columns:1fr;gap:30px}
+  .steps{grid-template-columns:1fr;gap:24px}
+  .steps .step:not(:last-child)::after{content:"↓";top:auto;bottom:-20px;right:auto;left:0}
+  .case{padding:34px 26px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><span class="mk">3LYNX</span><span class="ph">ロゴ後で差替</span></a>
+    <nav class="navlinks">
+      <a href="about.html">ABOUT</a>
+      <a href="service.html">SERVICE</a>
+      <a href="works.html" class="active">WORKS</a>
+      <a href="contact.html" class="cbtn">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">HOME</a> ／ WORKS</div>
+    <span class="ey">Works</span>
+    <h1>実績</h1>
+    <p class="lead">私たちの実績は、映像やビジュアルそのものではなく、「課題をどう動かしたか」にあります。「伝わらない」を「選ばれる」へ変えた、解決のプロセスでご紹介します。</p>
+  </div>
+</section>
+
+<!-- APPROACH INTRO -->
+<section class="intro">
+  <div class="wrap intro-grid">
+    <h2><span class="x">「伝わらない」</span><span class="arw">→</span><span class="o">「選ばれる」</span>へ。<br>結果で語る、実績の考え方。</h2>
+    <p>派手な映像を作ることがゴールではありません。眠っていた本質的な価値を見抜き、緻密なプランニング・心を動かすクリエイティブ・一流のメディア運用力で市場へ届け、ビジネスの数字を動かすこと。それが私たちの「実績」です。以下は、課題（Issue）から打ち手（Approach）、成果（Result）までの代表的なケースです。</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="filters" id="filters">
+      <button class="filt active" data-cat="all">ALL</button>
+      <button class="filt" data-cat="d2c">D2C・消費財</button>
+      <button class="filt" data-cat="btob">BtoB・技術</button>
+      <button class="filt" data-cat="service">サービス・エンタメ</button>
+      <button class="filt" data-cat="recruit">採用・ブランディング</button>
+    </div>
+
+    <div class="cases" id="grid">
+
+      <div class="case" data-cat="d2c">
+        <div class="ctop">
+          <span class="cno">CASE 01</span>
+          <span class="ccat">地方発・食品 / D2C</span>
+          <span class="cyr">2025</span>
+        </div>
+        <div class="cind">「知る人ぞ知る」を、全国の第一想起へ。</div>
+        <div class="steps">
+          <div class="step">
+            <div class="k">Issue<span class="jp">課題</span></div>
+            <p>品質は一級品。それでも認知は地元止まりで、「良いのに知られていない」状態が続いていた。販路を広げても、選ばれる理由が市場に伝わっていなかった。</p>
+          </div>
+          <div class="step">
+            <div class="k">Approach<span class="jp">打ち手</span></div>
+            <p>ブランドの核を再定義し、その「本質的な価値」を一本の物語へ翻訳。映像を軸にTVCMとデジタル広告を最適配分し、認知から購入までの導線を設計した。</p>
+          </div>
+          <div class="step result">
+            <div class="k">Result<span class="jp">成果</span></div>
+            <p>カテゴリー内での第一想起を獲得。これまで届かなかった新規顧客層への到達と、継続購入につながる動線を実現した。</p>
+          </div>
+        </div>
+        <div class="tags"><span>ブランド戦略</span><span>TVCM</span><span>デジタル運用</span></div>
+      </div>
+
+      <div class="case" data-cat="btob">
+        <div class="ctop">
+          <span class="cno">CASE 02</span>
+          <span class="ccat">BtoB / 技術・製造</span>
+          <span class="cyr">2024</span>
+        </div>
+        <div class="cind">伝わらない技術力を、選ばれる理由へ。</div>
+        <div class="steps">
+          <div class="step">
+            <div class="k">Issue<span class="jp">課題</span></div>
+            <p>高い技術力が、専門外の意思決定者にうまく伝わらず、比較検討の場で埋もれてしまっていた。価値が「翻訳」されていなかった。</p>
+          </div>
+          <div class="step">
+            <div class="k">Approach<span class="jp">打ち手</span></div>
+            <p>「価値の翻訳」に徹したブランドムービーを制作。指名検索を促す導線と、検討層に届くデジタル運用をセットで設計した。</p>
+          </div>
+          <div class="step result">
+            <div class="k">Result<span class="jp">成果</span></div>
+            <p>商談化率が改善。問い合わせの質が高まり、結果として採用応募の母集団形成にも好影響が波及した。</p>
+          </div>
+        </div>
+        <div class="tags"><span>ブランドムービー</span><span>コミュニケーション設計</span><span>指名検索</span></div>
+      </div>
+
+      <div class="case" data-cat="service">
+        <div class="ctop">
+          <span class="cno">CASE 03</span>
+          <span class="ccat">サービス / エンタメ</span>
+          <span class="cyr">2024</span>
+        </div>
+        <div class="cind">一過性の話題を、継続的に「選ばれる」状態へ。</div>
+        <div class="steps">
+          <div class="step">
+            <div class="k">Issue<span class="jp">課題</span></div>
+            <p>キャンペーンのたびに話題にはなるが、効果は一過性。継続的に選ばれ続ける状態を作れていなかった。</p>
+          </div>
+          <div class="step">
+            <div class="k">Approach<span class="jp">打ち手</span></div>
+            <p>OOH×SNSで都市生活者に反復接触する設計。世界観を一貫させ、単発の話題ではなくブランド体験として積み上げた。</p>
+          </div>
+          <div class="step result">
+            <div class="k">Result<span class="jp">成果</span></div>
+            <p>継続的な指名来店を獲得。自走するファンコミュニティの形成につながり、広告依存からの脱却が進んだ。</p>
+          </div>
+        </div>
+        <div class="tags"><span>OOH</span><span>SNS運用</span><span>世界観設計</span></div>
+      </div>
+
+      <div class="case" data-cat="recruit">
+        <div class="ctop">
+          <span class="cno">CASE 04</span>
+          <span class="ccat">採用 / ブランディング</span>
+          <span class="cyr">2023</span>
+        </div>
+        <div class="cind">「いい会社なのに応募が集まらない」を解く。</div>
+        <div class="steps">
+          <div class="step">
+            <div class="k">Issue<span class="jp">課題</span></div>
+            <p>働く環境も事業の将来性も十分。それでも魅力が言語化・可視化されておらず、求職者に届いていなかった。</p>
+          </div>
+          <div class="step">
+            <div class="k">Approach<span class="jp">打ち手</span></div>
+            <p>採用ブランディングムービーで「ここで働く意味」を物語化。採用サイトとSNSで、ターゲット世代への到達を最適化した。</p>
+          </div>
+          <div class="step result">
+            <div class="k">Result<span class="jp">成果</span></div>
+            <p>応募母集団の質が向上し、カルチャーフィットの高いマッチングが増加。採用広報の自走基盤が整った。</p>
+          </div>
+        </div>
+        <div class="tags"><span>採用ブランディング</span><span>ムービー</span><span>採用サイト</span></div>
+      </div>
+
+    </div>
+    <div class="emptynote">※ 掲載のケースは課題解決の構成・表現イメージです。具体的な企業名・数値などの実績情報は、確定後に差し替えます。</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" style="background:var(--paper);padding:96px 0;text-align:center">
+  <div class="wrap">
+    <span class="ey" style="color:var(--navy)">Contact</span>
+    <h2 style="font-family:'Shippori Mincho',serif;font-size:clamp(30px,4vw,48px);margin:18px 0 8px">あなたの課題も、動かせます。</h2>
+    <p style="color:#4a4e57;margin-bottom:36px">「良いのに伝わらない」段階からのご相談を歓迎します。</p>
+    <a class="btn solid" href="contact.html">無料で相談する →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fmain">
+    <div>
+      <div class="mk">3LYNX</div>
+      <p class="fdesc">株式会社3LYNX ／ スリーリンクス。大手の「頭脳」と前線の実行力を一つに——「伝わらない」を「選ばれる」へ変える、実力重視の〈広告連合〉。</p>
+    </div>
+    <div class="fcol">
+      <h4>Sitemap</h4>
+      <ul>
+        <li><a href="about.html">ABOUT ／ 会社情報</a></li>
+        <li><a href="service.html">SERVICE ／ 事業内容</a></li>
+        <li><a href="works.html">WORKS ／ 実績</a></li>
+        <li><a href="contact.html">CONTACT ／ お問い合わせ</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Contact</h4>
+      <div class="fline">TEL 03-6680-4501</div>
+      <div class="fline"><a href="contact.html" style="text-decoration:none">お問い合わせフォーム →</a></div>
+    </div>
+  </div>
+  <div class="wrap fbottom">
+    <div class="c">© 2026 3LYNX Inc. All Rights Reserved.</div>
+    <div class="ph">ロゴ・装飾画像は後で差し替え</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var filters=document.getElementById('filters');
+  var cards=Array.prototype.slice.call(document.querySelectorAll('#grid .case'));
+  filters.addEventListener('click',function(e){
+    var btn=e.target.closest('.filt'); if(!btn) return;
+    filters.querySelectorAll('.filt').forEach(function(f){f.classList.remove('active')});
+    btn.classList.add('active');
+    var cat=btn.getAttribute('data-cat');
+    cards.forEach(function(c){
+      var show = cat==='all' || c.getAttribute('data-cat')===cat;
+      c.style.display = show ? 'block':'none';
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社3LYNX ｜ 大手の「頭脳」を、本当の価値を届ける力に。</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ===== cinematic full-bleed hero ===== */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 38%}
+.hero-overlay{position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(90deg,rgba(7,13,24,.88) 0%,rgba(7,13,24,.55) 38%,rgba(7,13,24,.1) 62%,rgba(7,13,24,.32) 100%),
+    linear-gradient(180deg,rgba(7,13,24,.6) 0%,rgba(7,13,24,.05) 22%,rgba(7,13,24,0) 55%,rgba(7,13,24,.52) 100%);
+}
+.hero-inner{position:relative;z-index:2;width:100%;color:#fff;padding-top:60px}
+.hero .ey{color:#d4ac63;display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.hero .ey::before{content:"";width:40px;height:1px;background:#d4ac63}
+.hero h1{font-family:"Shippori Mincho",serif;font-weight:700;font-size:clamp(34px,4.7vw,64px);line-height:1.28;letter-spacing:.02em;text-shadow:0 2px 40px rgba(0,0,0,.45)}
+.hero h1 .nv{color:#e6c587}
+.hero .htag{font-family:"Shippori Mincho",serif;font-size:clamp(16px,1.8vw,22px);color:#fff;margin-top:24px;letter-spacing:.04em;display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hero .htag .gw{color:#e6c587;font-weight:700;font-size:1.18em;letter-spacing:.06em;text-shadow:0 2px 24px rgba(230,197,135,.35)}
+.hero .htag::before{content:"";width:26px;height:1px;background:rgba(255,255,255,.6)}
+.hero .lead{margin-top:24px;max-width:500px;font-size:15.5px;line-height:1.95;color:rgba(255,255,255,.84)}
+.hero-cta{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
+.btn.light.solid{background:#fff;color:var(--navy)}
+.btn.light.solid:hover{background:#f0eee8;transform:translateY(-2px)}
+.btn.light.ghost{border:1px solid rgba(255,255,255,.6);color:#fff}
+.btn.light.ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.hero-foot{position:absolute;left:0;right:0;bottom:30px;z-index:2}
+.hero-foot .row{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.scrollcue{display:flex;align-items:center;gap:13px;font-family:"Outfit";font-size:11px;letter-spacing:.28em;color:rgba(255,255,255,.7)}
+.scrollcue::after{content:"";width:46px;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.8),transparent);animation:cue 1.9s ease-in-out infinite}
+@keyframes cue{0%,100%{opacity:.35;transform:scaleX(.6);transform-origin:left}50%{opacity:1;transform:scaleX(1)}}
+.hero-loc{font-family:"Outfit";font-size:11px;letter-spacing:.16em;color:rgba(255,255,255,.55);text-transform:uppercase}
+
+/* header transparent over hero, solid on scroll */
+header{transition:background .35s,border-color .35s,backdrop-filter .35s}
+header.over-hero{background:transparent;backdrop-filter:none;border-bottom-color:transparent}
+header.over-hero .logo .mk{color:#fff}
+header.over-hero .logo .ph{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.35)}
+header.over-hero .navlinks a{color:#fff}
+header.over-hero .navlinks a:not(.cbtn)::after{background:#fff}
+header.over-hero .navlinks .cbtn{background:#fff;color:var(--navy)}
+header.over-hero .navlinks .cbtn:hover{background:#f0eee8;color:var(--navy)}
+header.over-hero.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom-color:var(--line)}
+header.over-hero.scrolled .logo .mk{color:var(--navy)}
+header.over-hero.scrolled .logo .ph{color:var(--muted);border-color:var(--line)}
+header.over-hero.scrolled .navlinks a{color:var(--ink)}
+header.over-hero.scrolled .navlinks a:hover{color:var(--navy)}
+header.over-hero.scrolled .navlinks a:not(.cbtn)::after{background:var(--navy)}
+header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
+
+/* ===== decorative image placeholder ===== */
+.deco-cap{position:absolute;left:16px;bottom:14px;z-index:4;max-width:82%;font-family:"Outfit",sans-serif;font-size:11px;letter-spacing:.03em;color:rgba(255,255,255,.78);line-height:1.65;background:rgba(7,13,24,.4);backdrop-filter:blur(5px);padding:9px 13px;border-left:2px solid var(--gold)}
+.deco-cap b{color:#e6c587;font-weight:500;letter-spacing:.1em}
+
+/* ===== message / concept ===== */
+.message{padding:122px 0}
+.msg-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:62px;align-items:center}
+.msg-text .ey{color:var(--gold)}
+.msg-lead{font-family:"Shippori Mincho",serif;font-size:clamp(23px,2.9vw,36px);line-height:1.55;color:var(--ink);margin-top:22px;letter-spacing:.02em}
+.msg-lead .nv{color:var(--navy)}
+.msg-body{margin-top:30px;font-size:15.5px;line-height:2.15;color:#3c4049;max-width:560px}
+.msg-body p+p{margin-top:20px}
+.msg-body b{color:var(--navy);font-weight:700}
+.msg-turn{margin-top:30px;font-family:"Shippori Mincho",serif;font-size:clamp(18px,2vw,24px);color:var(--ink);letter-spacing:.02em}
+.msg-turn .x{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(0,0,0,.25)}
+.msg-turn .o{color:var(--navy)}
+.msg-turn .arw{color:var(--gold);margin:0 12px}
+.msg-visual{position:relative}
+.msg-visual .vph{aspect-ratio:4/5;border-radius:4px}
+
+/* ===== strengths 三位一体 ===== */
+.strengths{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:112px 0}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:54px}
+.tcard{background:#fff;border:1px solid var(--line);padding:46px 38px;position:relative;transition:transform .25s,box-shadow .25s}
+.tcard:hover{transform:translateY(-4px);box-shadow:0 24px 50px -34px rgba(15,27,45,.55)}
+.tcard .gi{font-family:"Outfit";font-size:12px;letter-spacing:.1em;color:var(--gold)}
+.tcard .kanji{font-family:"Shippori Mincho",serif;font-weight:700;font-size:58px;line-height:1;color:var(--navy);margin:16px 0 22px}
+.tcard h3{font-family:"Shippori Mincho",serif;font-size:21px;color:var(--ink);line-height:1.45}
+.tcard .en{font-family:"Outfit";font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+.tcard p{font-size:14px;color:#4a4e57;line-height:1.95;margin-top:18px}
+.tri-line{margin-top:40px;text-align:center;font-family:"Shippori Mincho",serif;font-size:clamp(18px,2.2vw,26px);color:var(--ink);letter-spacing:.02em}
+.tri-line b{color:var(--navy)}
+.tri-line .br{color:var(--gold)}
+
+/* ===== full-bleed decorative band ===== */
+.band{position:relative;min-height:46vh;display:flex;align-items:center;overflow:hidden;padding:80px 0}
+.band .vph{position:absolute;inset:0}
+.band-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(7,13,24,.72),rgba(7,13,24,.25))}
+.band-copy{position:relative;z-index:3;color:#fff}
+.band-copy .ey{color:#e6c587;display:flex;align-items:center;gap:14px}
+.band-copy .ey::before{content:"";width:34px;height:1px;background:#e6c587}
+.band-copy h2{font-family:"Shippori Mincho",serif;font-size:clamp(26px,3.6vw,46px);line-height:1.45;margin-top:22px;letter-spacing:.03em;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+.band-copy h2 .g{color:#e6c587}
+.band-copy p{margin-top:24px;max-width:600px;font-size:15.5px;line-height:2;color:rgba(255,255,255,.85)}
+.band-copy p b{color:#e6c587;font-weight:500}
+
+/* service preview — 10 services */
+.sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.scell{background:#fff;padding:30px 34px;transition:background .25s;text-decoration:none;color:inherit;display:flex;align-items:baseline;gap:20px}
+.scell:hover{background:var(--paper)}
+.scell .ico{font-family:"Outfit";font-size:13px;letter-spacing:.08em;color:var(--gold);flex:none;width:30px;padding-top:4px}
+.scell .sbody{flex:1}
+.scell h3{font-family:"Shippori Mincho",serif;font-size:21px;display:inline-block}
+.scell .en{font-family:"Outfit";font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-top:4px}
+.scell p{font-size:13.5px;color:#4a4e57;margin-top:12px;line-height:1.8}
+.scell .arr{flex:none;color:var(--line);font-family:"Outfit";transition:color .2s,transform .2s;align-self:center}
+.scell:hover .arr{color:var(--navy);transform:translateX(3px)}
+
+/* media */
+.media{background:var(--navy);color:#fff;padding:104px 0}
+.media .sec-head{border-color:rgba(255,255,255,.18)}
+.media .sec-head h2{color:#fff}.media .sec-head .ey{color:var(--gold)}.media .sec-head .jp{color:rgba(255,255,255,.65)}
+.mlead{font-family:"Shippori Mincho",serif;font-size:clamp(20px,2.4vw,30px);line-height:1.7;max-width:900px;margin-bottom:54px}
+.mlead b{color:var(--gold)}
+.mcols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.mcol{border:1px solid rgba(255,255,255,.2);padding:30px 26px;background:rgba(255,255,255,.03)}
+.mcol .h{font-family:"Outfit";letter-spacing:.14em;font-size:12px;color:var(--gold);text-transform:uppercase;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.2);margin-bottom:18px}
+.mcol ul{list-style:none}
+.mcol li{font-size:14.5px;padding:9px 0;color:rgba(255,255,255,.9);display:flex;align-items:center;gap:10px}
+.mcol li::before{content:"";width:5px;height:5px;background:var(--gold);border-radius:50%;flex:none}
+.onestop-line{margin-top:44px;text-align:center;font-family:"Shippori Mincho",serif;font-size:clamp(18px,2vw,24px);padding:26px;border:1px solid rgba(255,255,255,.2);border-radius:3px}
+.onestop-line b{color:var(--gold)}
+.partner{margin-top:18px;text-align:center;font-size:12.5px;letter-spacing:.08em;color:rgba(255,255,255,.6)}
+
+/* ===== works — text based cases ===== */
+.cases{border:1px solid var(--line)}
+.case{background:#fff;padding:46px 46px}
+.case + .case{border-top:1px solid var(--line)}
+.case .ctop{display:flex;align-items:baseline;gap:18px;margin-bottom:30px;flex-wrap:wrap}
+.case .cno{font-family:"Outfit";font-size:13px;letter-spacing:.1em;color:var(--gold)}
+.case .cind{font-family:"Shippori Mincho",serif;font-size:23px;color:var(--navy)}
+.case .ccat{font-family:"Outfit";font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-left:auto}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;position:relative}
+.step .k{font-family:"Outfit";font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.step .k .jp{font-family:"Shippori Mincho",serif;font-size:15px;letter-spacing:0;text-transform:none;color:var(--navy)}
+.step p{font-size:14px;line-height:1.9;color:#3c4049}
+.step.result{position:relative}
+.step.result .k{color:var(--navy)}.step.result .k .jp{color:var(--navy)}
+.step.result p{color:var(--ink)}
+.steps .step:not(:last-child)::after{content:"→";position:absolute;top:30px;right:-22px;color:var(--line);font-size:18px}
+.steps .step{position:relative}
+.cases-note{font-family:"Outfit";font-size:11px;color:var(--muted);letter-spacing:.03em;margin-top:22px;line-height:1.7}
+.morebar{text-align:center;margin-top:46px}
+
+/* cta */
+.cta{background:var(--paper);padding:96px 0;text-align:center}
+.cta .ey{color:var(--navy)}
+.cta h2{font-family:"Shippori Mincho",serif;font-size:clamp(30px,4vw,52px);margin:18px 0 8px}
+.cta p{color:#4a4e57;margin-bottom:36px}
+
+@media(max-width:900px){
+  .hero h1{font-size:clamp(30px,7.5vw,44px)}
+  .hero-foot .hero-loc{display:none}
+  .msg-grid{grid-template-columns:1fr;gap:40px}
+  .tri,.sgrid,.mcols{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:22px}
+  .steps .step:not(:last-child)::after{content:"↓";top:auto;bottom:-20px;right:auto;left:0}
+  .case{padding:34px 26px}
+}
+</style>
+</head>
+<body>
+
+<header class="over-hero" id="siteHeader">
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><span class="mk">3LYNX</span><span class="ph">ロゴ後で差替</span></a>
+    <nav class="navlinks">
+      <a href="about.html">ABOUT</a>
+      <a href="service.html">SERVICE</a>
+      <a href="works.html">WORKS</a>
+      <a href="contact.html" class="cbtn">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="assets/hero.png" alt="夜明けの湖に立つ人物と山並み"></div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-inner">
+    <span class="ey">実力重視の広告連合 ／ Results-Driven Alliance</span>
+    <h1>大手の<span class="nv">「頭脳」</span>を、<br>本当の価値を、<br>届ける力に。</h1>
+    <p class="htag">前線で勝ち続ける実力重視の<span class="gw">〈広告連合〉</span>。</p>
+    <p class="lead">良いモノを作っているのに、なぜか市場に響いていない。そのもどかしさを、本物の広告戦略で解消します。</p>
+    <div class="hero-cta">
+      <a class="btn light solid" href="contact.html">無料で相談する →</a>
+      <a class="btn light ghost" href="works.html">実績を見る</a>
+    </div>
+  </div>
+  <div class="wrap hero-foot">
+    <div class="row">
+      <div class="scrollcue">SCROLL</div>
+      <div class="hero-loc">3LYNX — Brains of the Majors, Power of the Front Line</div>
+    </div>
+  </div>
+</section>
+
+<!-- MESSAGE / CONCEPT -->
+<section class="message">
+  <div class="wrap msg-grid">
+    <div class="msg-text">
+      <span class="ey">Message</span>
+      <div class="msg-lead">良いモノを作っているのに、<br>なぜか市場に<span class="nv">響いていない。</span></div>
+      <div class="msg-body">
+        <p>そのもどかしさを、本物の広告戦略で解消します。私たちが持つ大手の「頭脳」は、あなたのビジネスに眠る<b>本質的な価値</b>を見抜き、ターゲットの心へ正しく届けるためのもの。</p>
+        <p>緻密なプランニング、心を動かすクリエイティブ、そして一流のメディア運用力を<b>1つのチーム</b>に凝縮し、埋もれていた魅力を市場へと解放します。</p>
+      </div>
+      <div class="msg-turn"><span class="x">「伝わらない」</span><span class="arw">→</span><span class="o">「選ばれる」</span>へ。</div>
+      <p class="msg-body" style="margin-top:18px">あなたのビジョンを、最高の形で社会へ直通させます。</p>
+    </div>
+    <div class="msg-visual">
+      <div class="vph">
+        <div class="deco-cap"><b>推奨ビジュアル</b><br>暗がりの中、一筋の光が原石を照らす——埋もれた本質的価値が見出される瞬間を象徴する、静かでドラマチックな縦位置イメージ。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTHS 三位一体 -->
+<section class="strengths">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="ey">Our Strengths</span><h2>頭脳・感性・実行を、一つに。</h2></div>
+      <span class="jp">大手で培われた三つの力を、意思決定の速いチームで</span>
+    </div>
+    <div class="tri">
+      <div class="tcard">
+        <div class="gi">01 — STRATEGY</div>
+        <div class="kanji">頭</div>
+        <h3>緻密なプランニング</h3>
+        <div class="en">The Brains</div>
+        <p>大手で鍛えられた戦略設計を、そのまま。市場とターゲットを読み解き、「何を、誰に、どう伝えるか」を勝てる精度で組み立てます。</p>
+      </div>
+      <div class="tcard">
+        <div class="gi">02 — CREATIVE</div>
+        <div class="kanji">心</div>
+        <h3>心を動かす<br>クリエイティブ</h3>
+        <div class="en">The Heart</div>
+        <p>映像を核に、ターゲットの感情を動かす表現を。眠っていた本質的な価値を、思わず振り向く一本の物語へと翻訳します。</p>
+      </div>
+      <div class="tcard">
+        <div class="gi">03 — MEDIA</div>
+        <div class="kanji">技</div>
+        <h3>一流の<br>メディア運用力</h3>
+        <div class="en">The Execution</div>
+        <p>マスからデジタルまで、勝てる出稿を実力本位で設計・実行。届けるべき相手の前に、最適な形で確実に出します。</p>
+      </div>
+    </div>
+    <div class="tri-line">三つを<b>1つのチーム</b>に凝縮した、<span class="br">実力重視の〈広告連合〉。</span></div>
+  </div>
+</section>
+
+<!-- DECORATIVE BAND -->
+<section class="band">
+  <div class="vph">
+    <div class="deco-cap"><b>推奨ビジュアル</b><br>夜の都市を俯瞰。高層ビル群の大型ビジョンとサイネージが一斉に灯る——メディアの最前線と「届く」到達力を象徴する横位置イメージ。</div>
+  </div>
+  <div class="band-overlay"></div>
+  <div class="wrap band-copy">
+    <span class="ey">Our Mission</span>
+    <h2>その「本当の価値」を、<br><span class="g">まっすぐ届けきる。</span></h2>
+    <p>優れたプロダクトやサービスには、まだ語られていない<b>「本当の価値」</b>が眠っています。私たちの使命は、大手で培った「頭脳」と前線の実行力で、その価値を見抜き、選ばれるべき相手へまっすぐ届けきること。前線で勝ち続ける——それが、実力重視の〈広告連合〉の存在意義です。</p>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section class="sec" id="service">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="ey">Service</span><h2>事業内容</h2></div>
+      <span class="jp">戦略から実行まで、10の領域を連合体制でワンストップ</span>
+    </div>
+    <div class="sgrid">
+      <a class="scell" href="service.html#strategy">
+        <div class="ico">01</div>
+        <div class="sbody"><h3>戦略プランニング</h3><div class="en">Strategic Planning</div>
+        <p>課題の整理から、勝てるコミュニケーション戦略の設計まで。すべての起点となる「頭脳」。</p></div>
+        <span class="arr">→</span>
+      </a>
+      <a class="scell" href="service.html#film">
+        <div class="ico">02</div>
+        <div class="sbody"><h3>映像制作</h3><div class="en">Film &amp; Motion</div>
+        <p>TVCM・ブランドムービー・Web動画を、企画から一貫で。心を動かす表現力が核。</p></div>
+        <span class="arr">→</span>
+      </a>
+      <a class="scell" href="service.html#design">
+        <div class="ico">03</div>
+        <div class="sbody"><h3>デザイン</h3><div class="en">Design</div>
+        <p>グラフィック・Web・SNSまで。媒体を横断してもぶれない一貫した表現。</p></div>
+        <span class="arr">→</span>
+      </a>
+      <a class="scell" href="service.html#event">
+        <div class="ico">04</div>
+        <div class="sbody"><h3>イベント</h3><div class="en">Event</div>
+        <p>発表会・ライブ・ポップアップの企画・演出・運営をトータルで。</p></div>
+        <span class="arr">→</span>
+      </a>
+      <a class="scell" href="service.html#research">
+        <div class="ico">05</div>
+        <div class="sbody"><h3>リサーチ</h3><div class="en">Research</div>
+        <p>市場・ターゲット・競合を読み解く調査・分析。戦略の根拠をつくる。</p></div>
+        <span class="arr">→</span>
+      </a>
+      <a class="scell" href="service.html#webmarketing">
+        <div class="ico">06</div>
+        <div class="sbody"><h3>Webマーケティング</h3><div class="en">Web Marketing</div>
+        <p>運用型広告・SNS・サイト改善で、デジタルの成果を最大化。</p></div>
+        <span class="arr">→</span>
+      </a>
+      <a class="scell" href="service.html#product">
+        <div class="ico">07</div>
+        <div class="sbody"><h3>商品／事業開発</h3><div class="en">Product &amp; Business</div>
+        <p>選ばれる商品・事業を、コンセプトから共创。価値を根っこから。</p></div>
+        <span class="arr">→</span>
+      </a>
+      <a class="scell" href="service.html#promotion">
+        <div class="ico">08</div>
+        <div class="sbody"><h3>セールスプロモーション</h3><div class="en">Sales Promotion</div>
+        <p>店頭・販促・キャンペーンで、購買と行動を后押しする。</p></div>
+        <span class="arr">→</span>
+      </a>
+      <a class="scell" href="service.html#massmedia">
+        <div class="ico">09</div>
+        <div class="sbody"><h3>マスメディア</h3><div class="en">Mass Media</div>
+        <p>テレビ・ラジオ・新聞・雑誌のプランニング＆バイイング。</p></div>
+        <span class="arr">→</span>
+      </a>
+      <a class="scell" href="service.html#pr">
+        <div class="ico">10</div>
+        <div class="sbody"><h3>PR</h3><div class="en">Public Relations</div>
+        <p>報道・話題化で、第三者からの信頼を獲得。「選ばれる」を後押し。</p></div>
+        <span class="arr">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section class="media" id="media">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="ey">Media Planning &amp; Buying</span><h2>メディアプランニング＆バイイング</h2></div>
+      <span class="jp">マスからデジタルまで、勝てる出稿を実力本位で。</span>
+    </div>
+    <p class="mlead">大手と同等の<b>メディア運用力</b>を、実力本位で。テレビなどの<b>マスメディア</b>にとどまらず、<b>OOH／デジタル</b>まで横断したプランニング＆バイイングを、ひとつのチームでワンストップに実現します。</p>
+    <div class="mcols">
+      <div class="mcol"><div class="h">Mass Media</div><ul><li>テレビ</li><li>ラジオ</li><li>新聞</li><li>雑誌</li></ul></div>
+      <div class="mcol"><div class="h">OOH</div><ul><li>交通広告</li><li>都市型ビジョン</li><li>屋外看板</li><li>サイネージ</li></ul></div>
+      <div class="mcol"><div class="h">Digital</div><ul><li>運用型広告</li><li>SNS／動画広告</li><li>タイアップ</li><li>効果測定</li></ul></div>
+    </div>
+    <div class="onestop-line">緻密なプランニングから、メディアの<b>バイイング・運用</b>まで ── すべてを一つのチームで。</div>
+    <div class="partner">※ 大手で培われた知見・ネットワークを基盤としたメディア取扱い</div>
+  </div>
+</section>
+
+<!-- WORKS (text-based) -->
+<section class="sec" id="works">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="ey">Works</span><h2>実績</h2></div>
+      <span class="jp">「伝わらない」を「選ばれる」へ変えた、課題解決の物語</span>
+    </div>
+    <div class="cases">
+      <div class="case">
+        <div class="ctop">
+          <span class="cno">CASE 01</span>
+          <span class="cind">「知る人ぞ知る」を、全国の第一想起へ</span>
+          <span class="ccat">地方発・食品 / D2C</span>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="k">Issue<span class="jp">課題</span></div>
+            <p>品質は一級品。それでも認知は地元止まりで、「良いのに知られていない」状態が続いていた。</p>
+          </div>
+          <div class="step">
+            <div class="k">Approach<span class="jp">打ち手</span></div>
+            <p>ブランドの核を再定義し、映像を軸にTVCMとデジタルを最適配分。「本質的な価値」を一本の物語へ翻訳した。</p>
+          </div>
+          <div class="step result">
+            <div class="k">Result<span class="jp">成果</span></div>
+            <p>カテゴリー内での第一想起を獲得し、これまで届かなかった新規顧客層への到達を実現。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="ctop">
+          <span class="cno">CASE 02</span>
+          <span class="cind">伝わらない技術力を、選ばれる理由へ</span>
+          <span class="ccat">BtoB / 技術・製造</span>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="k">Issue<span class="jp">課題</span></div>
+            <p>高い技術力が、専門外の意思決定者にうまく伝わらず、比較検討で埋もれてしまっていた。</p>
+          </div>
+          <div class="step">
+            <div class="k">Approach<span class="jp">打ち手</span></div>
+            <p>「価値の翻訳」に徹したブランドムービーを制作。指名検索を促す導線とデジタル運用をセットで設計した。</p>
+          </div>
+          <div class="step result">
+            <div class="k">Result<span class="jp">成果</span></div>
+            <p>商談化率が改善。問い合わせの質が高まり、採用応募の母集団形成にも波及した。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="ctop">
+          <span class="cno">CASE 03</span>
+          <span class="cind">一過性の話題を、継続的に「選ばれる」状態へ</span>
+          <span class="ccat">サービス / エンタメ</span>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="k">Issue<span class="jp">課題</span></div>
+            <p>キャンペーンのたびに話題にはなるが一過性。継続的に選ばれ続ける状態を作れていなかった。</p>
+          </div>
+          <div class="step">
+            <div class="k">Approach<span class="jp">打ち手</span></div>
+            <p>OOH×SNSで都市生活者に反復接触。世界観を一貫設計し、ブランド体験として積み上げた。</p>
+          </div>
+          <div class="step result">
+            <div class="k">Result<span class="jp">成果</span></div>
+            <p>継続的な指名来店を獲得し、自走するファンコミュニティの形成につながった。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cases-note">※ 掲載のケースは構成・表現イメージです。具体的な実績内容は確定後に差し替えます。</div>
+    <div class="morebar"><a class="btn ghost" href="works.html">実績の考え方を見る →</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <span class="ey">Contact</span>
+    <h2>その魅力、まだ伝わりきっていません。</h2>
+    <p>「良いモノなのに響かない」段階からのご相談を歓迎します。まずは課題をお聞かせください。</p>
+    <a class="btn solid" href="contact.html">無料で相談する →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap fmain">
+    <div>
+      <div class="mk">3LYNX</div>
+      <p class="fdesc">株式会社3LYNX ／ スリーリンクス。大手の「頭脳」と前線の実行力を一つに——「伝わらない」を「選ばれる」へ変える、実力重視の〈広告連合〉。</p>
+    </div>
+    <div class="fcol">
+      <h4>Sitemap</h4>
+      <ul>
+        <li><a href="about.html">ABOUT ／ 会社情報</a></li>
+        <li><a href="service.html">SERVICE ／ 事業内容</a></li>
+        <li><a href="works.html">WORKS ／ 実績</a></li>
+        <li><a href="contact.html">CONTACT ／ お問い合わせ</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Contact</h4>
+      <div class="fline">TEL 03-6680-4501</div>
+      <div class="fline"><a href="contact.html" style="text-decoration:none">お問い合わせフォーム →</a></div>
+    </div>
+  </div>
+  <div class="wrap fbottom">
+    <div class="c">© 2026 3LYNX Inc. All Rights Reserved.</div>
+    <div class="ph">ロゴ・装飾画像は後で差し替え</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var h=document.getElementById('siteHeader');
+  function onScroll(){ h.classList.toggle('scrolled', window.scrollY>60); }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

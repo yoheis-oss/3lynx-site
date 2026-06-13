@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONTACT ｜ 株式会社3LYNX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.cwrap{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+.cside h2{font-family:"Shippori Mincho",serif;font-size:30px;color:var(--ink);line-height:1.5}
+.cside p{font-size:14.5px;color:#4a4e57;line-height:2;margin-top:20px;max-width:380px}
+.cinfo{margin-top:38px;border-top:1px solid var(--line)}
+.cinfo .row{padding:18px 0;border-bottom:1px solid var(--line)}
+.cinfo .k{font-family:"Outfit";font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.cinfo .v{font-size:15px;color:var(--ink);margin-top:7px}
+.cinfo .v .tbd{font-family:"Outfit";font-size:11px;color:var(--muted);border:1px dashed var(--line);padding:2px 8px;margin-left:8px}
+
+/* form */
+.form{background:#fff;border:1px solid var(--line);padding:46px 44px}
+.fgroup{margin-bottom:24px}
+.fgroup label{display:block;font-size:13px;font-weight:500;margin-bottom:9px;color:var(--ink)}
+.fgroup label .req{color:#b23b2e;font-size:11px;margin-left:6px}
+.fgroup input,.fgroup textarea,.fgroup select{
+  width:100%;font-family:inherit;font-size:14.5px;color:var(--ink);
+  border:1px solid var(--line);border-radius:2px;padding:13px 15px;background:#fcfbf9;transition:border .2s,box-shadow .2s;
+}
+.fgroup textarea{min-height:130px;resize:vertical}
+.fgroup input:focus,.fgroup textarea:focus,.fgroup select:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(19,49,92,.08)}
+.fgroup.err input,.fgroup.err textarea{border-color:#c0493b;background:#fdf6f4}
+.errmsg{display:none;color:#c0493b;font-size:12px;margin-top:7px}
+.fgroup.err .errmsg{display:block}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.submit{width:100%;background:var(--navy);color:#fff;border:none;font-family:inherit;font-size:15px;letter-spacing:.04em;padding:17px;border-radius:2px;cursor:pointer;transition:background .2s}
+.submit:hover{background:var(--navy-soft)}
+.privacy{font-size:11.5px;color:var(--muted);margin-top:16px;line-height:1.7}
+.thanks{display:none;text-align:center;padding:60px 20px}
+.thanks.show{display:block}
+.thanks .ic{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--navy);color:var(--navy);display:grid;place-items:center;font-size:28px;margin:0 auto 24px}
+.thanks h3{font-family:"Shippori Mincho",serif;font-size:26px;color:var(--ink)}
+.thanks p{font-size:14px;color:#4a4e57;line-height:1.9;margin-top:14px}
+.form.sent .formbody{display:none}
+@media(max-width:900px){.cwrap{grid-template-columns:1fr;gap:40px}.frow{grid-template-columns:1fr}.form{padding:32px 24px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><span class="mk">3LYNX</span><span class="ph">ロゴ後で差替</span></a>
+    <nav class="navlinks">
+      <a href="about.html">ABOUT</a>
+      <a href="service.html">SERVICE</a>
+      <a href="works.html">WORKS</a>
+      <a href="contact.html" class="cbtn">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">HOME</a> ／ CONTACT</div>
+    <span class="ey">Contact</span>
+    <h1>お問い合わせ</h1>
+    <p class="lead">「良いモノなのに、なぜか響かない」。そのもどかしさの段階からのご相談を歓迎します。下記フォームまたはお電話で、お気軽にご連絡ください。</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap cwrap">
+    <div class="cside">
+      <h2>課題の整理から、<br>ご一緒します。</h2>
+      <p>「何から相談すればいいか分からない」段階でも構いません。目的やご予算感をお聞かせいただければ、大手水準の「頭脳」で最適な進め方をご提案します。</p>
+      <div class="cinfo">
+        <div class="row"><div class="k">Tel</div><div class="v">03-6680-4501</div></div>
+        <div class="row"><div class="k">Hours</div><div class="v">平日 10:00 – 19:00</div></div>
+      </div>
+    </div>
+
+    <div class="form" id="form">
+      <form class="formbody" id="formbody" novalidate>
+        <div class="frow">
+          <div class="fgroup">
+            <label>お名前<span class="req">必須</span></label>
+            <input type="text" name="name" placeholder="山田 太郎">
+            <div class="errmsg">お名前をご入力ください。</div>
+          </div>
+          <div class="fgroup">
+            <label>会社名</label>
+            <input type="text" name="company" placeholder="株式会社〇〇">
+            <div class="errmsg"></div>
+          </div>
+        </div>
+        <div class="frow">
+          <div class="fgroup">
+            <label>メールアドレス<span class="req">必須</span></label>
+            <input type="email" name="email" placeholder="you@example.com">
+            <div class="errmsg">正しいメールアドレスをご入力ください。</div>
+          </div>
+          <div class="fgroup">
+            <label>電話番号</label>
+            <input type="tel" name="tel" placeholder="00-0000-0000">
+            <div class="errmsg"></div>
+          </div>
+        </div>
+        <div class="fgroup">
+          <label>ご相談内容の種類</label>
+          <select name="type">
+            <option>事業戦略・ブランディング</option>
+            <option>映像制作</option>
+            <option>広告・キャンペーン</option>
+            <option>メディアプランニング＆バイイング</option>
+            <option>イベント</option>
+            <option>その他</option>
+          </select>
+          <div class="errmsg"></div>
+        </div>
+        <div class="fgroup">
+          <label>お問い合わせ内容<span class="req">必須</span></label>
+          <textarea name="message" placeholder="ご相談内容、目的、ご予算感やスケジュールなどをご記入ください。"></textarea>
+          <div class="errmsg">お問い合わせ内容をご入力ください。</div>
+        </div>
+        <button type="submit" class="submit">送信する →</button>
+        <p class="privacy">送信いただいた内容は、お問い合わせ対応の目的にのみ利用します。※ 本フォームはデザイン確認用のデモであり、実際の送信は行われません。</p>
+      </form>
+      <div class="thanks" id="thanks">
+        <div class="ic">✓</div>
+        <h3>送信しました</h3>
+        <p>お問い合わせありがとうございます。<br>内容を確認のうえ、担当者よりご連絡いたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fmain">
+    <div>
+      <div class="mk">3LYNX</div>
+      <p class="fdesc">株式会社3LYNX ／ スリーリンクス。大手の「頭脳」と前線の実行力を一つに——「伝わらない」を「選ばれる」へ変える、実力重視の〈広告連合〉。</p>
+    </div>
+    <div class="fcol">
+      <h4>Sitemap</h4>
+      <ul>
+        <li><a href="about.html">ABOUT ／ 会社情報</a></li>
+        <li><a href="service.html">SERVICE ／ 事業内容</a></li>
+        <li><a href="works.html">WORKS ／ 実績</a></li>
+        <li><a href="contact.html">CONTACT ／ お問い合わせ</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Contact</h4>
+      <div class="fline">TEL 03-6680-4501</div>
+      <div class="fline"><a href="contact.html" style="text-decoration:none">お問い合わせフォーム →</a></div>
+    </div>
+  </div>
+  <div class="wrap fbottom">
+    <div class="c">© 2026 3LYNX Inc. All Rights Reserved.</div>
+    <div class="ph">ロゴ・装飾画像は後で差し替え</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form=document.getElementById('formbody');
+  var wrap=document.getElementById('form');
+  var thanks=document.getElementById('thanks');
+  function setErr(input,on){input.closest('.fgroup').classList.toggle('err',on)}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=true;
+    var name=form.name, email=form.email, msg=form.message;
+    if(!name.value.trim()){setErr(name,true);ok=false}else setErr(name,false);
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value.trim())){setErr(email,true);ok=false}else setErr(email,false);
+    if(!msg.value.trim()){setErr(msg,true);ok=false}else setErr(msg,false);
+    if(!ok){var first=form.querySelector('.fgroup.err input,.fgroup.err textarea');if(first)first.focus();return;}
+    wrap.classList.add('sent');
+    thanks.classList.add('show');
+  });
+  ['name','email','message'].forEach(function(n){
+    form[n].addEventListener('input',function(){setErr(form[n],false)});
+  });
+})();
+</script>
+</body>
+</html>
