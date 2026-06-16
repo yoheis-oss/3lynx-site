@@ -10,13 +10,12 @@
 <link rel="stylesheet" href="styles.css">
 <style>
 /* top decorative band */
-.svc-deco{position:relative;height:34vh;min-height:240px;overflow:hidden;border-bottom:1px solid var(--line);display:flex;align-items:center}
-.svc-deco .vph{position:absolute;inset:0}
-.svc-deco .band-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(7,13,24,.7),rgba(7,13,24,.25))}
-.svc-deco .cpy{position:relative;z-index:3;color:#fff;width:100%}
-.svc-deco .cpy .inner{font-family:"Shippori Mincho",serif;font-size:clamp(18px,2.2vw,26px);line-height:1.5}
+.svc-deco{position:relative;height:46vh;min-height:340px;max-height:520px;overflow:hidden;border-bottom:1px solid var(--line);display:flex;align-items:flex-end}
+.svc-deco img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%}
+.svc-deco .band-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(7,13,24,.35) 0%,rgba(7,13,24,.04) 30%,rgba(7,13,24,.68) 100%)}
+.svc-deco .cpy{position:relative;z-index:3;color:#fff;width:100%;padding-bottom:38px}
+.svc-deco .cpy .inner{font-family:"Shippori Mincho",serif;font-size:clamp(18px,2.4vw,30px);line-height:1.5;text-shadow:0 2px 24px rgba(0,0,0,.5)}
 .svc-deco .cpy .inner b{color:#e6c587}
-.svc-deco .deco-cap{bottom:14px}
 
 /* service list */
 .slist{border-top:1px solid var(--line)}
@@ -77,9 +76,7 @@
 
 <!-- DECORATIVE BAND -->
 <section class="svc-deco">
-  <div class="vph">
-    <div class="deco-cap"><b>推奨ビジュアル</b><br>多様な専門家が一つのテーブルを囲むチームの俯瞰、または複数の歯車がかみ合う抽象——「連合体制」を象徴する横位置イメージ。</div>
-  </div>
+  <img src="assets/service.png" alt="多様な専門家がひとつのテーブルを囲んで議論するチームの俯瞰">
   <div class="band-overlay"></div>
   <div class="wrap cpy"><div class="inner">10の専門領域を、<b>ひとつの勝てるチーム</b>へ。</div></div>
 </section>

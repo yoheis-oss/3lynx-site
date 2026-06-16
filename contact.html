@@ -9,6 +9,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
+/* contact hero with city image */
+.contact-hero{position:relative;min-height:64vh;display:flex;align-items:flex-end;overflow:hidden}
+.contact-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%}
+.contact-hero .ov{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(7,13,24,.62) 0%,rgba(7,13,24,.18) 26%,rgba(7,13,24,.28) 55%,rgba(7,13,24,.86) 100%)}
+.contact-hero .inner{position:relative;z-index:3;color:#fff;width:100%;padding:0 0 56px}
+.contact-hero .crumb{font-family:"Outfit";font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.75);margin-bottom:24px}
+.contact-hero .crumb a{text-decoration:none}
+.contact-hero .ey{color:#e6c587;display:flex;align-items:center;gap:13px;margin-bottom:18px}
+.contact-hero .ey::before{content:"";width:34px;height:1px;background:#e6c587}
+.contact-hero h1{font-family:"Shippori Mincho",serif;font-weight:700;font-size:clamp(34px,5vw,60px);line-height:1.25;text-shadow:0 2px 34px rgba(0,0,0,.5)}
+.contact-hero .lead{margin-top:22px;max-width:620px;font-size:15.5px;line-height:1.95;color:rgba(255,255,255,.86)}
 .cwrap{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
 .cside h2{font-family:"Shippori Mincho",serif;font-size:30px;color:var(--ink);line-height:1.5}
 .cside p{font-size:14.5px;color:#4a4e57;line-height:2;margin-top:20px;max-width:380px}
@@ -59,11 +70,13 @@
   </div>
 </header>
 
-<section class="phero">
-  <div class="wrap">
+<section class="contact-hero">
+  <img src="assets/contact.png" alt="夜の都市を俯瞰し、大型ビジョンとサイネージが輝く街並み">
+  <div class="ov"></div>
+  <div class="wrap inner">
     <div class="crumb"><a href="index.html">HOME</a> ／ CONTACT</div>
     <span class="ey">Contact</span>
-    <h1>お問い合わせ</h1>
+    <h1>その魅力を、<br>街へ、市場へ。</h1>
     <p class="lead">「良いモノなのに、なぜか響かない」。そのもどかしさの段階からのご相談を歓迎します。下記フォームまたはお電話で、お気軽にご連絡ください。</p>
   </div>
 </section>

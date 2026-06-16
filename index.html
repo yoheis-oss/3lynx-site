@@ -12,11 +12,11 @@
 /* ===== cinematic full-bleed hero ===== */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 38%}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scaleX(-1)}
 .hero-overlay{position:absolute;inset:0;z-index:1;
   background:
-    linear-gradient(90deg,rgba(7,13,24,.88) 0%,rgba(7,13,24,.55) 38%,rgba(7,13,24,.1) 62%,rgba(7,13,24,.32) 100%),
-    linear-gradient(180deg,rgba(7,13,24,.6) 0%,rgba(7,13,24,.05) 22%,rgba(7,13,24,0) 55%,rgba(7,13,24,.52) 100%);
+    linear-gradient(90deg,rgba(7,13,24,.9) 0%,rgba(7,13,24,.62) 40%,rgba(7,13,24,.22) 66%,rgba(7,13,24,.42) 100%),
+    linear-gradient(180deg,rgba(7,13,24,.7) 0%,rgba(7,13,24,.2) 26%,rgba(7,13,24,.12) 55%,rgba(7,13,24,.6) 100%);
 }
 .hero-inner{position:relative;z-index:2;width:100%;color:#fff;padding-top:60px}
 .hero .ey{color:#d4ac63;display:flex;align-items:center;gap:14px;margin-bottom:26px}
@@ -75,6 +75,10 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
 .msg-turn .arw{color:var(--gold);margin:0 12px}
 .msg-visual{position:relative}
 .msg-visual .vph{aspect-ratio:4/5;border-radius:4px}
+.msg-visual img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px}
+.msg-visual .mv-cap{position:absolute;left:0;bottom:0;z-index:3;background:var(--navy);color:#fff;padding:18px 24px;max-width:84%;border-top-right-radius:4px}
+.msg-visual .mv-cap .ey{color:var(--gold);margin-bottom:8px;white-space:nowrap}
+.msg-visual .mv-cap p{font-family:"Shippori Mincho",serif;font-size:15px;line-height:1.6}
 
 /* ===== strengths 三位一体 ===== */
 .strengths{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:112px 0}
@@ -93,7 +97,8 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
 /* ===== full-bleed decorative band ===== */
 .band{position:relative;min-height:46vh;display:flex;align-items:center;overflow:hidden;padding:80px 0}
 .band .vph{position:absolute;inset:0}
-.band-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(7,13,24,.72),rgba(7,13,24,.25))}
+.band .bandimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.band-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(7,13,24,.82),rgba(7,13,24,.45) 55%,rgba(7,13,24,.3))}
 .band-copy{position:relative;z-index:3;color:#fff}
 .band-copy .ey{color:#e6c587;display:flex;align-items:center;gap:14px}
 .band-copy .ey::before{content:"";width:34px;height:1px;background:#e6c587}
@@ -188,8 +193,8 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
   <div class="wrap hero-inner">
     <span class="ey">実力重視の広告連合 ／ Results-Driven Alliance</span>
     <h1>大手の<span class="nv">「頭脳」</span>を、<br>本当の価値を、<br>届ける力に。</h1>
-    <p class="htag">前線で勝ち続ける実力重視の<span class="gw">〈広告連合〉</span>。</p>
-    <p class="lead">良いモノを作っているのに、なぜか市場に響いていない。そのもどかしさを、本物の広告戦略で解消します。</p>
+    <p class="htag">前線で勝ち続ける実力重視の<span class="gw">〈広告連合〉</span></p>
+    <p class="lead">良いモノを作っているのに、なぜか市場に響いていない。<br>そのもどかしさを、本物の広告戦略で解消します。</p>
     <div class="hero-cta">
       <a class="btn light solid" href="contact.html">無料で相談する →</a>
       <a class="btn light ghost" href="works.html">実績を見る</a>
@@ -217,8 +222,10 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
       <p class="msg-body" style="margin-top:18px">あなたのビジョンを、最高の形で社会へ直通させます。</p>
     </div>
     <div class="msg-visual">
-      <div class="vph">
-        <div class="deco-cap"><b>推奨ビジュアル</b><br>暗がりの中、一筋の光が原石を照らす——埋もれた本質的価値が見出される瞬間を象徴する、静かでドラマチックな縦位置イメージ。</div>
+      <img src="assets/message.png" alt="朝露に輝く苔と、木々の間を差し込む一筋の光">
+      <div class="mv-cap" style="opacity: 0">
+        <div class="ey">3LYNX — Value</div>
+        <p>眠っていた価値に、<br>一筋の光を。</p>
       </div>
     </div>
   </div>
@@ -260,9 +267,7 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
 
 <!-- DECORATIVE BAND -->
 <section class="band">
-  <div class="vph">
-    <div class="deco-cap"><b>推奨ビジュアル</b><br>夜の都市を俯瞰。高層ビル群の大型ビジョンとサイネージが一斉に灯る——メディアの最前線と「届く」到達力を象徴する横位置イメージ。</div>
-  </div>
+  <img class="bandimg" src="assets/mission.png" alt="黄昏の凍った湖に一人立ち、雪山を見渡す人物">
   <div class="band-overlay"></div>
   <div class="wrap band-copy">
     <span class="ey">Our Mission</span>
@@ -455,7 +460,7 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
   <div class="wrap fmain">
     <div>
       <div class="mk">3LYNX</div>
-      <p class="fdesc">株式会社3LYNX ／ スリーリンクス。大手の「頭脳」と前線の実行力を一つに——「伝わらない」を「選ばれる」へ変える、実力重視の〈広告連合〉。</p>
+      <p class="fdesc">株式会社3LYNX ／ スリーリンクス。大手の「頭脳」と<br>前線の実行力を一つに——<br>「伝わらない」を「選ばれる」へ変える、実力重視の〈広告連合〉。</p>
     </div>
     <div class="fcol">
       <h4>Sitemap</h4>
