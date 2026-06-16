@@ -16,6 +16,20 @@
 .statement h2 .nv{color:var(--navy)}
 .statement p{max-width:680px;margin:36px auto 0;font-size:16px;line-height:2.1;color:#3c4049}
 
+/* statement color band (no image) */
+.stmt-band{position:relative;background:var(--navy);overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:88px 0}
+.stmt-band::before{content:"";position:absolute;inset:0;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:46px 46px;}
+.stmt-band::after{content:"";position:absolute;top:-30%;right:-8%;width:46%;height:160%;z-index:0;
+  background:radial-gradient(closest-side,rgba(176,138,62,.34),rgba(176,138,62,0) 72%);}
+.stmt-band .wrap{position:relative;z-index:2;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.stmt-band .mark{font-family:"Shippori Mincho",serif;font-weight:700;font-size:clamp(64px,11vw,150px);line-height:.9;color:transparent;-webkit-text-stroke:1.4px rgba(230,197,135,.7);text-stroke:1.4px rgba(230,197,135,.7)}
+.stmt-band .cap .ey{color:#e6c587;display:flex;align-items:center;gap:13px;margin-bottom:16px}
+.stmt-band .cap .ey::before{content:"";width:30px;height:1px;background:#e6c587}
+.stmt-band .cap h3{font-family:"Shippori Mincho",serif;font-size:clamp(22px,2.8vw,36px);line-height:1.5;color:#fff}
+.stmt-band .cap h3 b{color:#e6c587}
+
 /* strengths */
 .strength{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:104px 0}
 .sgrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:54px}
@@ -33,8 +47,11 @@
 .prow .v{font-size:15px;color:#2d3038;line-height:1.85}
 .prow .v .tbd{font-family:"Outfit";font-size:11px;color:var(--muted);border:1px dashed var(--line);padding:2px 8px;margin-left:8px;letter-spacing:.04em}
 .access{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
-.access .map{position:relative}
-.access .map .vph{position:absolute;inset:0}
+.access .swatch{position:relative;overflow:hidden;background:var(--navy);min-height:240px}
+.access .swatch::before{content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 14px,transparent 14px 28px);}
+.access .swatch::after{content:"";position:absolute;left:38px;bottom:38px;width:54px;height:54px;border:1px solid rgba(230,197,135,.7);border-radius:50%;}
+.access .swatch .lbl{position:absolute;left:38px;top:36px;z-index:2;font-family:"Outfit";font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(230,197,135,.9)}
 .access .info{padding:40px 38px}
 .access .info h3{font-family:"Shippori Mincho",serif;font-size:22px;color:var(--navy)}
 .access .info p{font-size:14px;color:#4a4e57;line-height:2;margin-top:16px}
@@ -69,6 +86,17 @@
     <span class="ey">Our Mission</span>
     <h2><span class="nv">「伝わらない」</span>を、<br><span class="nv">「選ばれる」</span>へ。</h2>
     <p>良いモノを作っているのに、なぜか市場に響いていない。そのもどかしさを、本物の広告戦略で解消します。緻密なプランニング、心を動かすクリエイティブ、一流のメディア運用力を1つのチームに凝縮し、ビジネスに眠る本質的な価値を見抜いて、ターゲットの心へ正しく届ける。埋もれていた魅力を、市場へと解放します。</p>
+  </div>
+</section>
+
+<!-- STATEMENT COLOR BAND (no image) -->
+<section class="stmt-band">
+  <div class="wrap">
+    <div class="mark">3</div>
+    <div class="cap">
+      <span class="ey">The Brains</span>
+      <h3>大手で培った<b>「頭脳」</b>を、<br>ひとつのテーブルに。</h3>
+    </div>
   </div>
 </section>
 
@@ -115,7 +143,7 @@
     </div>
 
     <div class="access">
-      <div class="map"><div class="vph"><div class="deco-cap"><b>推奨ビジュアル</b><br>外部カメラで高層オフィス街を見上げた構図、または会議シーンのトリミング——「頭脳」と信頼を感じさせるビジネスイメージ。</div></div></div>
+      <div class="swatch"><span class="lbl">3LYNX — One Team</span></div>
       <div class="info">
         <h3>お問い合わせ</h3>
         <p>ご相談はお電話（TEL 03-6680-4501）またはフォームから。<br>お打ち合わせはオンラインでも承ります。</p>
