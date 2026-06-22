@@ -10,46 +10,50 @@
 <link rel="stylesheet" href="styles.css">
 <style>
 /* approach intro */
-.intro{padding:96px 0 40px}
+.intro{padding:90px 0 30px}
 .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.intro h2{font-family:"Shippori Mincho",serif;font-size:clamp(24px,3vw,38px);line-height:1.5;color:var(--ink)}
-.intro h2 .x{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(0,0,0,.25)}
-.intro h2 .o{color:var(--navy)}
-.intro h2 .arw{color:var(--gold);margin:0 10px}
+.intro h2{font-family:"Shippori Mincho",serif;font-size:clamp(23px,2.9vw,36px);line-height:1.5;color:var(--ink)}
+.intro h2 .nv{color:var(--navy)}
 .intro p{font-size:15px;line-height:2.05;color:#3c4049}
+.intro .stat{display:flex;gap:40px;margin-top:30px;border-top:1px solid var(--line);padding-top:24px}
+.intro .stat .n{font-family:"Shippori Mincho",serif;font-size:34px;color:var(--navy);line-height:1}
+.intro .stat .n .u{font-size:15px;margin-left:4px}
+.intro .stat .l{font-family:"Outfit";font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
 
 /* filters */
 .filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 36px}
-.filt{font-family:"Outfit";font-size:12.5px;letter-spacing:.04em;padding:10px 18px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);cursor:pointer;transition:.2s;white-space:nowrap}
+.filt{font-family:"Outfit";font-size:12.5px;letter-spacing:.02em;padding:10px 18px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);cursor:pointer;transition:.2s;white-space:nowrap}
 .filt:hover{border-color:var(--navy);color:var(--navy)}
 .filt.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.filt .c{opacity:.6;margin-left:6px;font-size:11px}
 
-/* text cases */
-.cases{border:1px solid var(--line)}
-.case{background:#fff;padding:48px 46px}
-.case + .case{border-top:1px solid var(--line)}
-.case .ctop{display:flex;align-items:baseline;gap:18px;margin-bottom:14px;flex-wrap:wrap}
-.case .cno{font-family:"Outfit";font-size:13px;letter-spacing:.1em;color:var(--gold);white-space:nowrap}
-.case .ccat{font-family:"Outfit";font-size:11px;letter-spacing:.1em;color:#fff;background:var(--navy);padding:5px 11px;border-radius:999px}
-.case .cyr{font-family:"Outfit";font-size:11px;letter-spacing:.1em;color:var(--muted);margin-left:auto}
-.case .cind{font-family:"Shippori Mincho",serif;font-size:clamp(20px,2.2vw,28px);color:var(--ink);line-height:1.4;margin-bottom:30px}
-.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;position:relative}
-.steps .step{position:relative}
-.step .k{font-family:"Outfit";font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:9px;margin-bottom:12px}
-.step .k .jp{font-family:"Shippori Mincho",serif;font-size:15px;letter-spacing:0;text-transform:none;color:var(--navy)}
-.step p{font-size:14px;line-height:1.9;color:#3c4049}
-.step.result .k{color:var(--navy)}
-.step.result p{color:var(--ink);font-weight:500}
-.steps .step:not(:last-child)::after{content:"→";position:absolute;top:28px;right:-22px;color:var(--line);font-size:18px}
-.case .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
-.case .tags span{font-family:"Outfit";font-size:11px;letter-spacing:.04em;padding:6px 11px;border:1px solid var(--line);border-radius:999px;color:var(--navy)}
-.emptynote{font-family:"Outfit";font-size:11px;color:var(--muted);letter-spacing:.04em;margin-top:24px;line-height:1.7}
+/* work cards */
+.wkgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.wk{background:#fff;padding:34px 32px 30px;display:flex;flex-direction:column;transition:background .25s}
+.wk:hover{background:var(--paper)}
+.wk .cat{font-family:"Outfit";font-size:11px;letter-spacing:.04em;color:#fff;background:var(--navy);align-self:flex-start;padding:5px 11px;border-radius:999px;margin-bottom:18px;white-space:nowrap}
+.wk .nm{font-family:"Shippori Mincho",serif;font-size:23px;color:var(--ink);line-height:1.4}
+.wk .task{font-size:13.5px;color:#4a4e57;line-height:1.85;margin-top:12px;flex:1}
+.wk .areas{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.wk .areas .h{font-family:"Outfit";font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:11px}
+.wk .tags{display:flex;flex-wrap:wrap;gap:7px}
+.wk .tags span{font-size:11.5px;letter-spacing:.01em;padding:5px 10px;border:1px solid var(--line);border-radius:4px;color:var(--navy);background:#fff;line-height:1.3}
+.wk:hover .tags span{background:var(--bg)}
+.allspan{grid-column:1/-1}
+.fullnote{font-family:"Outfit";font-size:11px;color:var(--muted);letter-spacing:.02em;margin-top:24px;line-height:1.7}
 
+/* industries */
+.industries{background:var(--navy);color:#fff;padding:96px 0;margin-top:0}
+.industries .sec-head{border-color:rgba(255,255,255,.18)}
+.industries .sec-head h2{color:#fff}.industries .sec-head .ey{color:var(--gold)}.industries .sec-head .jp{color:rgba(255,255,255,.65)}
+.indgrid{display:flex;flex-wrap:wrap;gap:14px}
+.indgrid span{font-family:"Shippori Mincho",serif;font-size:clamp(15px,1.6vw,19px);color:#fff;border:1px solid rgba(255,255,255,.25);padding:14px 24px;border-radius:999px;transition:.2s}
+.indgrid span:hover{background:rgba(230,197,135,.12);border-color:var(--gold)}
+
+@media(max-width:1000px){.wkgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){
-  .intro-grid{grid-template-columns:1fr;gap:30px}
-  .steps{grid-template-columns:1fr;gap:24px}
-  .steps .step:not(:last-child)::after{content:"↓";top:auto;bottom:-20px;right:auto;left:0}
-  .case{padding:34px 26px}
+  .intro-grid{grid-template-columns:1fr;gap:28px}
+  .wkgrid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -73,128 +77,153 @@
     <div class="crumb"><a href="index.html">HOME</a> ／ WORKS</div>
     <span class="ey">Works</span>
     <h1>実績</h1>
-    <p class="lead">私たちの実績は、映像やビジュアルそのものではなく、「課題をどう動かしたか」にあります。「伝わらない」を「選ばれる」へ変えた、解決のプロセスでご紹介します。</p>
+    <p class="lead">教育から、IT、食品、消費財、金融、官公庁まで。業種を問わず、戦略プランニングから映像・デザイン・メディアまでをワンストップで手がけてきました。対応領域の組み合わせが、そのまま課題解決の幅です。</p>
   </div>
 </section>
 
 <!-- APPROACH INTRO -->
 <section class="intro">
   <div class="wrap intro-grid">
-    <h2><span class="x">「伝わらない」</span><span class="arw">→</span><span class="o">「選ばれる」</span>へ。<br>結果で語る、実績の考え方。</h2>
-    <p>派手な映像を作ることがゴールではありません。眠っていた本質的な価値を見抜き、緻密なプランニング・心を動かすクリエイティブ・一流のメディア運用力で市場へ届け、ビジネスの数字を動かすこと。それが私たちの「実績」です。以下は、課題（Issue）から打ち手（Approach）、成果（Result）までの代表的なケースです。</p>
+    <h2>ひとつの案件に、<br><span class="nv">いくつもの専門領域</span>を。</h2>
+    <div>
+      <p>私たちの実績は、単発の制作物ではなく「事業の課題を、複数の専門領域を束ねて動かした」プロジェクトです。各案件のタグは、実際に担った対応領域。ブランディング1本に、戦略・リサーチ・映像・デザイン・メディア・PRが連動していることが、3LYNX の働き方を物語ります。</p>
+      <div class="stat">
+        <div><div class="n">13<span class="u">件</span></div><div class="l">Featured Projects</div></div>
+        <div><div class="n">10<span class="u">領域</span></div><div class="l">Service Areas</div></div>
+        <div><div class="n">9<span class="u">業種</span></div><div class="l">Industries</div></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="sec" style="padding-top:20px">
   <div class="wrap">
     <div class="filters" id="filters">
-      <button class="filt active" data-cat="all">ALL</button>
-      <button class="filt" data-cat="d2c">D2C・消費財</button>
-      <button class="filt" data-cat="btob">BtoB・技術</button>
-      <button class="filt" data-cat="service">サービス・エンタメ</button>
-      <button class="filt" data-cat="recruit">採用・ブランディング</button>
+      <button class="filt active" data-cat="all">ALL<span class="c">13</span></button>
+      <button class="filt" data-cat="edu">学校・教育<span class="c">2</span></button>
+      <button class="filt" data-cat="it">IT・サービス<span class="c">3</span></button>
+      <button class="filt" data-cat="food">食品・飲料<span class="c">3</span></button>
+      <button class="filt" data-cat="brand">消費財・ブランド<span class="c">2</span></button>
+      <button class="filt" data-cat="finance">金融・カード<span class="c">2</span></button>
+      <button class="filt" data-cat="gov">官公庁<span class="c">1</span></button>
     </div>
 
-    <div class="cases" id="grid">
+    <div class="wkgrid" id="grid">
 
-      <div class="case" data-cat="d2c">
-        <div class="ctop">
-          <span class="cno">CASE 01</span>
-          <span class="ccat">地方発・食品 / D2C</span>
-          <span class="cyr">2025</span>
-        </div>
-        <div class="cind">「知る人ぞ知る」を、全国の第一想起へ。</div>
-        <div class="steps">
-          <div class="step">
-            <div class="k">Issue<span class="jp">課題</span></div>
-            <p>品質は一級品。それでも認知は地元止まりで、「良いのに知られていない」状態が続いていた。販路を広げても、選ばれる理由が市場に伝わっていなかった。</p>
-          </div>
-          <div class="step">
-            <div class="k">Approach<span class="jp">打ち手</span></div>
-            <p>ブランドの核を再定義し、その「本質的な価値」を一本の物語へ翻訳。映像を軸にTVCMとデジタル広告を最適配分し、認知から購入までの導線を設計した。</p>
-          </div>
-          <div class="step result">
-            <div class="k">Result<span class="jp">成果</span></div>
-            <p>カテゴリー内での第一想起を獲得。これまで届かなかった新規顧客層への到達と、継続購入につながる動線を実現した。</p>
-          </div>
-        </div>
-        <div class="tags"><span>ブランド戦略</span><span>TVCM</span><span>デジタル運用</span></div>
+      <div class="wk" data-cat="edu">
+        <span class="cat">学校・教育</span>
+        <div class="nm">私立大学</div>
+        <div class="task">大学ブランディング／生徒募集</div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>戦略プランニング</span><span>デザイン</span><span>Webマーケティング</span></div></div>
       </div>
 
-      <div class="case" data-cat="btob">
-        <div class="ctop">
-          <span class="cno">CASE 02</span>
-          <span class="ccat">BtoB / 技術・製造</span>
-          <span class="cyr">2024</span>
-        </div>
-        <div class="cind">伝わらない技術力を、選ばれる理由へ。</div>
-        <div class="steps">
-          <div class="step">
-            <div class="k">Issue<span class="jp">課題</span></div>
-            <p>高い技術力が、専門外の意思決定者にうまく伝わらず、比較検討の場で埋もれてしまっていた。価値が「翻訳」されていなかった。</p>
-          </div>
-          <div class="step">
-            <div class="k">Approach<span class="jp">打ち手</span></div>
-            <p>「価値の翻訳」に徹したブランドムービーを制作。指名検索を促す導線と、検討層に届くデジタル運用をセットで設計した。</p>
-          </div>
-          <div class="step result">
-            <div class="k">Result<span class="jp">成果</span></div>
-            <p>商談化率が改善。問い合わせの質が高まり、結果として採用応募の母集団形成にも好影響が波及した。</p>
-          </div>
-        </div>
-        <div class="tags"><span>ブランドムービー</span><span>コミュニケーション設計</span><span>指名検索</span></div>
+      <div class="wk" data-cat="edu">
+        <span class="cat">学校・教育</span>
+        <div class="nm">学習塾</div>
+        <div class="task">生徒募集／新規事業開発／コーポレートブランディング</div>
+        <div class="areas"><div class="h">対応領域 — 全10領域</div><div class="tags"><span>戦略プランニング</span><span>商品・事業開発</span><span>リサーチ</span><span>映像制作</span><span>デザイン</span><span>イベント</span><span>Webマーケティング</span><span>セールスプロモーション</span><span>マスメディア</span><span>PR</span></div></div>
       </div>
 
-      <div class="case" data-cat="service">
-        <div class="ctop">
-          <span class="cno">CASE 03</span>
-          <span class="ccat">サービス / エンタメ</span>
-          <span class="cyr">2024</span>
-        </div>
-        <div class="cind">一過性の話題を、継続的に「選ばれる」状態へ。</div>
-        <div class="steps">
-          <div class="step">
-            <div class="k">Issue<span class="jp">課題</span></div>
-            <p>キャンペーンのたびに話題にはなるが、効果は一過性。継続的に選ばれ続ける状態を作れていなかった。</p>
-          </div>
-          <div class="step">
-            <div class="k">Approach<span class="jp">打ち手</span></div>
-            <p>OOH×SNSで都市生活者に反復接触する設計。世界観を一貫させ、単発の話題ではなくブランド体験として積み上げた。</p>
-          </div>
-          <div class="step result">
-            <div class="k">Result<span class="jp">成果</span></div>
-            <p>継続的な指名来店を獲得。自走するファンコミュニティの形成につながり、広告依存からの脱却が進んだ。</p>
-          </div>
-        </div>
-        <div class="tags"><span>OOH</span><span>SNS運用</span><span>世界観設計</span></div>
+      <div class="wk" data-cat="it">
+        <span class="cat">IT・サービス</span>
+        <div class="nm">SES事業</div>
+        <div class="task">コーポレートブランディング／採用マーケティング<br><span style="color:var(--muted);font-size:12px">システムエンジニア派遣委託事業</span></div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>戦略プランニング</span><span>リサーチ</span><span>映像制作</span><span>デザイン</span><span>Webマーケティング</span><span>マスメディア</span><span>PR</span></div></div>
       </div>
 
-      <div class="case" data-cat="recruit">
-        <div class="ctop">
-          <span class="cno">CASE 04</span>
-          <span class="ccat">採用 / ブランディング</span>
-          <span class="cyr">2023</span>
-        </div>
-        <div class="cind">「いい会社なのに応募が集まらない」を解く。</div>
-        <div class="steps">
-          <div class="step">
-            <div class="k">Issue<span class="jp">課題</span></div>
-            <p>働く環境も事業の将来性も十分。それでも魅力が言語化・可視化されておらず、求職者に届いていなかった。</p>
-          </div>
-          <div class="step">
-            <div class="k">Approach<span class="jp">打ち手</span></div>
-            <p>採用ブランディングムービーで「ここで働く意味」を物語化。採用サイトとSNSで、ターゲット世代への到達を最適化した。</p>
-          </div>
-          <div class="step result">
-            <div class="k">Result<span class="jp">成果</span></div>
-            <p>応募母集団の質が向上し、カルチャーフィットの高いマッチングが増加。採用広報の自走基盤が整った。</p>
-          </div>
-        </div>
-        <div class="tags"><span>採用ブランディング</span><span>ムービー</span><span>採用サイト</span></div>
+      <div class="wk" data-cat="it">
+        <span class="cat">IT・サービス</span>
+        <div class="nm">コンタクトセンター向けAIサービス</div>
+        <div class="task">マーケティング戦略／プロモーション企画立案</div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>戦略プランニング</span><span>商品・事業開発</span><span>リサーチ</span><span>デザイン</span></div></div>
+      </div>
+
+      <div class="wk" data-cat="food">
+        <span class="cat">食品・飲料</span>
+        <div class="nm">高級飲食店向けプレミアムビール</div>
+        <div class="task">マーケティング支援／セールスツール制作</div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>映像制作</span><span>デザイン</span><span>イベント</span><span>セールスプロモーション</span></div></div>
+      </div>
+
+      <div class="wk" data-cat="food">
+        <span class="cat">食品・飲料 ／ 地方創生</span>
+        <div class="nm">名産品焼酎</div>
+        <div class="task">新商品開発／マーケティング支援</div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>戦略プランニング</span><span>商品・事業開発</span><span>デザイン</span><span>セールスプロモーション</span><span>マスメディア</span><span>PR</span></div></div>
+      </div>
+
+      <div class="wk" data-cat="gov">
+        <span class="cat">官公庁</span>
+        <div class="nm">国の助成事業</div>
+        <div class="task">助成事業の広報／関連業界の啓蒙</div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>戦略プランニング</span><span>リサーチ</span><span>映像制作</span><span>デザイン</span><span>Webマーケティング</span><span>セールスプロモーション</span><span>マスメディア</span><span>PR</span></div></div>
+      </div>
+
+      <div class="wk" data-cat="brand">
+        <span class="cat">消費財・ブランド ／ 富裕層</span>
+        <div class="nm">高級スポーツ用品</div>
+        <div class="task">新ブランド・プロダクト開発／マーケティング支援</div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>戦略プランニング</span><span>商品・事業開発</span><span>映像制作</span><span>デザイン</span><span>Webマーケティング</span><span>PR</span></div></div>
+      </div>
+
+      <div class="wk" data-cat="food">
+        <span class="cat">食品・飲料 ／ 輸入</span>
+        <div class="nm">輸入食品</div>
+        <div class="task">新ブランド開発／マーケティング支援</div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>戦略プランニング</span><span>商品・事業開発</span><span>デザイン</span><span>Webマーケティング</span><span>セールスプロモーション</span></div></div>
+      </div>
+
+      <div class="wk" data-cat="it">
+        <span class="cat">IT・サービス</span>
+        <div class="nm">ITサービス</div>
+        <div class="task">年間コミュニケーション戦略および施策実施</div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>戦略プランニング</span><span>リサーチ</span><span>デザイン</span><span>Webマーケティング</span><span>マスメディア</span></div></div>
+      </div>
+
+      <div class="wk" data-cat="brand">
+        <span class="cat">消費財・ブランド ／ 化粧品</span>
+        <div class="nm">化粧品「洗顔料」</div>
+        <div class="task">年間コミュニケーション戦略および実施</div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>戦略プランニング</span><span>リサーチ</span><span>デザイン</span><span>Webマーケティング</span><span>マスメディア</span><span>PR</span></div></div>
+      </div>
+
+      <div class="wk" data-cat="finance">
+        <span class="cat">金融・カード</span>
+        <div class="nm">カード会社</div>
+        <div class="task">新サービスローンチ／カフェタイアップ施策</div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>戦略プランニング</span><span>デザイン</span><span>マスメディア</span><span>PR</span></div></div>
+      </div>
+
+      <div class="wk" data-cat="finance">
+        <span class="cat">金融・カード</span>
+        <div class="nm">カード会社</div>
+        <div class="task">上顧客向け企業方針説明会</div>
+        <div class="areas"><div class="h">対応領域</div><div class="tags"><span>イベント実施・運営</span><span>各種制作</span></div></div>
       </div>
 
     </div>
-    <div class="emptynote">※ 掲載のケースは課題解決の構成・表現イメージです。具体的な企業名・数値などの実績情報は、確定後に差し替えます。</div>
+    <div class="fullnote">※ 守秘のため、クライアント名は業種・事業種別での表記としています。具体的な事例詳細は、お問い合わせ時に個別にご紹介します。</div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="ey">Industries</span><h2>対応業種</h2></div>
+      <span class="jp">BtoC・BtoB・官民を問わず、幅広い領域で</span>
+    </div>
+    <div class="indgrid">
+      <span>メーカー</span>
+      <span>toB メーカー</span>
+      <span>toB その他</span>
+      <span>サービス（流通・施設・エンタメ・金融）</span>
+      <span>IT</span>
+      <span>富裕層</span>
+      <span>官公庁系</span>
+      <span>アパレル</span>
+      <span>学校・教育</span>
+    </div>
   </div>
 </section>
 
@@ -202,8 +231,8 @@
 <section class="cta" style="background:var(--paper);padding:96px 0;text-align:center">
   <div class="wrap">
     <span class="ey" style="color:var(--navy)">Contact</span>
-    <h2 style="font-family:'Shippori Mincho',serif;font-size:clamp(30px,4vw,48px);margin:18px 0 8px">あなたの課題も、動かせます。</h2>
-    <p style="color:#4a4e57;margin-bottom:36px">「良いのに伝わらない」段階からのご相談を歓迎します。</p>
+    <h2 style="font-family:'Shippori Mincho',serif;font-size:clamp(30px,4vw,48px);margin:18px 0 8px">あなたの業種でも、動かせます。</h2>
+    <p style="color:#4a4e57;margin-bottom:36px">業種・課題に合わせて、必要な領域を束ねてご提案します。</p>
     <a class="btn solid" href="contact.html">無料で相談する →</a>
   </div>
 </section>
@@ -239,7 +268,7 @@
 <script>
 (function(){
   var filters=document.getElementById('filters');
-  var cards=Array.prototype.slice.call(document.querySelectorAll('#grid .case'));
+  var cards=Array.prototype.slice.call(document.querySelectorAll('#grid .wk'));
   filters.addEventListener('click',function(e){
     var btn=e.target.closest('.filt'); if(!btn) return;
     filters.querySelectorAll('.filt').forEach(function(f){f.classList.remove('active')});
@@ -247,7 +276,7 @@
     var cat=btn.getAttribute('data-cat');
     cards.forEach(function(c){
       var show = cat==='all' || c.getAttribute('data-cat')===cat;
-      c.style.display = show ? 'block':'none';
+      c.style.display = show ? 'flex':'none';
     });
   });
 })();
