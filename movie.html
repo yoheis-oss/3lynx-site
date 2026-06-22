@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOVIE ｜ 株式会社3LYNX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.intro{padding:88px 0 26px}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.intro h2{font-family:"Shippori Mincho",serif;font-size:clamp(23px,2.9vw,36px);line-height:1.5;color:var(--ink)}
+.intro h2 .nv{color:var(--navy)}
+.intro p{font-size:15px;line-height:2.05;color:#3c4049}
+
+/* featured (first) video */
+.feat{padding:10px 0 4px}
+.vbox{position:relative;width:100%;aspect-ratio:16/9;background:#0f1b2d;border-radius:4px;overflow:hidden;cursor:pointer}
+.vbox .thumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s,opacity .3s}
+.vbox:hover .thumb{transform:scale(1.04)}
+.vbox .shade{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(7,13,24,.15),rgba(7,13,24,.5));pointer-events:none}
+.vbox .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;transition:transform .2s,background .2s;pointer-events:none}
+.vbox:hover .play{transform:translate(-50%,-50%) scale(1.08);background:#fff}
+.vbox .play::after{content:"";margin-left:6px;border-style:solid;border-width:15px 0 15px 26px;border-color:transparent transparent transparent var(--navy)}
+.vbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:4}
+.vmeta{display:flex;align-items:baseline;gap:16px;margin-top:20px;flex-wrap:wrap}
+.vmeta .no{font-family:"Outfit";font-size:13px;letter-spacing:.08em;color:var(--gold)}
+.vmeta .ti{font-family:"Shippori Mincho",serif;font-size:clamp(19px,2vw,26px);color:var(--ink)}
+.vmeta .cat{font-family:"Outfit";font-size:11px;letter-spacing:.1em;color:#fff;background:var(--navy);padding:5px 11px;border-radius:999px;margin-left:auto;white-space:nowrap}
+
+/* grid videos */
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:34px;margin-top:24px}
+.vcard .vbox{border-radius:4px}
+.vcard .play{width:64px;height:64px}
+.vcard .play::after{border-width:11px 0 11px 19px}
+.vcard .vmeta{margin-top:16px}
+.vcard .vmeta .ti{font-size:19px}
+
+@media(max-width:900px){
+  .intro-grid{grid-template-columns:1fr;gap:26px}
+  .vgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><span class="mk">3LYNX</span><span class="ph">ロゴ後で差替</span></a>
+    <nav class="navlinks">
+      <a href="about.html">ABOUT</a>
+      <a href="service.html">SERVICE</a>
+      <a href="movie.html" class="active">MOVIE</a>
+      <a href="works.html">WORKS</a>
+      <a href="contact.html" class="cbtn">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">HOME</a> ／ MOVIE</div>
+    <span class="ey">Movie</span>
+    <h1>映像実績</h1>
+    <p class="lead">映像制作は、私たちの原点であり、すべての施策を貫く核です。心を動かし、ブランドの「本当の価値」を物語に翻訳した映像をご覧ください。</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="wrap intro-grid">
+    <h2>映像で、<br><span class="nv">「本当の価値」</span>を物語に。</h2>
+    <p>企画・絵コンテから撮影、編集、MAまで一貫して手がけ、ブランドムービー・プロモーション映像・コンセプトムービーまで幅広く制作。下記はその一部です。サムネイルをクリックすると再生します。</p>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="sec feat" style="padding-top:24px">
+  <div class="wrap">
+    <div class="vcard featured" data-yt="dL_F1iUlSgc">
+      <div class="vbox">
+        <img class="thumb" src="https://i.ytimg.com/vi/dL_F1iUlSgc/maxresdefault.jpg" alt="" loading="lazy"
+             onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/dL_F1iUlSgc/hqdefault.jpg'">
+        <div class="shade"></div>
+        <div class="play" aria-hidden="true"></div>
+      </div>
+      <div class="vmeta">
+        <span class="no">FEATURED</span>
+        <span class="ti">ブランドムービー — 01</span>
+        <span class="cat">Film &amp; Motion</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRID -->
+<section class="sec" style="padding-top:40px">
+  <div class="wrap">
+    <div class="vgrid">
+      <div class="vcard" data-yt="7w2EXH7p4y8">
+        <div class="vbox">
+          <img class="thumb" src="https://i.ytimg.com/vi/7w2EXH7p4y8/maxresdefault.jpg" alt="" loading="lazy"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/7w2EXH7p4y8/hqdefault.jpg'">
+          <div class="shade"></div>
+          <div class="play" aria-hidden="true"></div>
+        </div>
+        <div class="vmeta"><span class="no">02</span><span class="ti">プロモーション映像</span></div>
+      </div>
+      <div class="vcard" data-yt="fQ4Jx0Zgtmg">
+        <div class="vbox">
+          <img class="thumb" src="https://i.ytimg.com/vi/fQ4Jx0Zgtmg/maxresdefault.jpg" alt="" loading="lazy"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/fQ4Jx0Zgtmg/hqdefault.jpg'">
+          <div class="shade"></div>
+          <div class="play" aria-hidden="true"></div>
+        </div>
+        <div class="vmeta"><span class="no">03</span><span class="ti">コンセプトムービー</span></div>
+      </div>
+      <div class="vcard" data-yt="5XekXCz8bn0">
+        <div class="vbox">
+          <img class="thumb" src="https://i.ytimg.com/vi/5XekXCz8bn0/maxresdefault.jpg" alt="" loading="lazy"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/5XekXCz8bn0/hqdefault.jpg'">
+          <div class="shade"></div>
+          <div class="play" aria-hidden="true"></div>
+        </div>
+        <div class="vmeta"><span class="no">04</span><span class="ti">ブランドムービー — 02</span></div>
+      </div>
+      <div class="vcard" data-yt="NfmDf2wmgDo">
+        <div class="vbox">
+          <img class="thumb" src="https://i.ytimg.com/vi/NfmDf2wmgDo/maxresdefault.jpg" alt="" loading="lazy"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/NfmDf2wmgDo/hqdefault.jpg'">
+          <div class="shade"></div>
+          <div class="play" aria-hidden="true"></div>
+        </div>
+        <div class="vmeta"><span class="no">05</span><span class="ti">プロモーション映像</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" style="background:var(--paper);padding:96px 0;text-align:center">
+  <div class="wrap">
+    <span class="ey" style="color:var(--navy)">Contact</span>
+    <h2 style="font-family:'Shippori Mincho',serif;font-size:clamp(30px,4vw,48px);margin:18px 0 8px">こんな映像を、作りたい。</h2>
+    <p style="color:#4a4e57;margin-bottom:36px">イメージの共有からでも構いません。企画からご提案します。</p>
+    <a class="btn solid" href="contact.html">無料で相談する →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fmain">
+    <div>
+      <div class="mk">3LYNX</div>
+      <p class="fdesc">株式会社3LYNX ／ スリーリンクス。大手の「頭脳」と前線の実行力を一つに——「伝わらない」を「選ばれる」へ変える、実力重視の〈広告連合〉。</p>
+    </div>
+    <div class="fcol">
+      <h4>Sitemap</h4>
+      <ul>
+        <li><a href="about.html">ABOUT ／ 会社情報</a></li>
+        <li><a href="service.html">SERVICE ／ 事業内容</a></li>
+        <li><a href="movie.html">MOVIE ／ 映像実績</a></li>
+        <li><a href="works.html">WORKS ／ 実績</a></li>
+        <li><a href="contact.html">CONTACT ／ お問い合わせ</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Contact</h4>
+      <div class="fline">TEL 03-6680-4501</div>
+      <div class="fline"><a href="contact.html" style="text-decoration:none">お問い合わせフォーム →</a></div>
+    </div>
+  </div>
+  <div class="wrap fbottom">
+    <div class="c">© 2026 3LYNX Inc. All Rights Reserved.</div>
+    <div class="ph">ロゴ・装飾画像は後で差し替え</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('.vcard').forEach(function(card){
+    var box=card.querySelector('.vbox');
+    box.addEventListener('click',function(){
+      if(box.querySelector('iframe')) return;
+      var id=card.getAttribute('data-yt');
+      var ifr=document.createElement('iframe');
+      ifr.setAttribute('src','https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0');
+      ifr.setAttribute('title','3LYNX movie');
+      ifr.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      ifr.setAttribute('allowfullscreen','');
+      box.appendChild(ifr);
+    });
+  });
+})();
+</script>
+</body>
+</html>
