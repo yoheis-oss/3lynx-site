@@ -135,24 +135,14 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
 .onestop-line b{color:var(--gold)}
 .partner{margin-top:18px;text-align:center;font-size:12.5px;letter-spacing:.08em;color:rgba(255,255,255,.6)}
 
-/* ===== works — text based cases ===== */
-.cases{border:1px solid var(--line)}
-.case{background:#fff;padding:46px 46px}
-.case + .case{border-top:1px solid var(--line)}
-.case .ctop{display:flex;align-items:baseline;gap:18px;margin-bottom:30px;flex-wrap:wrap}
-.case .cno{font-family:"Outfit";font-size:13px;letter-spacing:.1em;color:var(--gold)}
-.case .cind{font-family:"Shippori Mincho",serif;font-size:23px;color:var(--navy)}
-.case .ccat{font-family:"Outfit";font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-left:auto}
-.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;position:relative}
-.step .k{font-family:"Outfit";font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:9px;margin-bottom:12px}
-.step .k .jp{font-family:"Shippori Mincho",serif;font-size:15px;letter-spacing:0;text-transform:none;color:var(--navy)}
-.step p{font-size:14px;line-height:1.9;color:#3c4049}
-.step.result{position:relative}
-.step.result .k{color:var(--navy)}.step.result .k .jp{color:var(--navy)}
-.step.result p{color:var(--ink)}
-.steps .step:not(:last-child)::after{content:"→";position:absolute;top:30px;right:-22px;color:var(--line);font-size:18px}
-.steps .step{position:relative}
-.cases-note{font-family:"Outfit";font-size:11px;color:var(--muted);letter-spacing:.03em;margin-top:22px;line-height:1.7}
+/* ===== works — real project cards ===== */
+.wkmini{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.wkmini .wk{background:#fff;padding:28px 26px 26px;display:flex;flex-direction:column;transition:background .25s}
+.wkmini .wk:hover{background:var(--paper)}
+.wkmini .cat{font-family:"Outfit";font-size:10px;letter-spacing:.04em;color:#fff;background:var(--navy);align-self:flex-start;padding:5px 10px;border-radius:999px;margin-bottom:16px}
+.wkmini .nm{font-family:"Shippori Mincho",serif;font-size:19px;color:var(--ink);line-height:1.4}
+.wkmini .task{font-size:12.5px;color:#4a4e57;line-height:1.7;margin-top:10px;flex:1}
+.wkmini .cnt{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-family:"Outfit";font-size:11px;letter-spacing:.04em;color:var(--gold)}
 .morebar{text-align:center;margin-top:46px}
 
 /* cta */
@@ -372,77 +362,35 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
   <div class="wrap">
     <div class="sec-head">
       <div><span class="ey">Works</span><h2>実績</h2></div>
-      <span class="jp">「伝わらない」を「選ばれる」へ変えた、課題解決の物語</span>
+      <span class="jp">業種を問わず、複数領域を束ねて課題を動かす</span>
     </div>
-    <div class="cases">
-      <div class="case">
-        <div class="ctop">
-          <span class="cno">CASE 01</span>
-          <span class="cind">「知る人ぞ知る」を、全国の第一想起へ</span>
-          <span class="ccat">地方発・食品 / D2C</span>
-        </div>
-        <div class="steps">
-          <div class="step">
-            <div class="k">Issue<span class="jp">課題</span></div>
-            <p>品質は一級品。それでも認知は地元止まりで、「良いのに知られていない」状態が続いていた。</p>
-          </div>
-          <div class="step">
-            <div class="k">Approach<span class="jp">打ち手</span></div>
-            <p>ブランドの核を再定義し、映像を軸にTVCMとデジタルを最適配分。「本質的な価値」を一本の物語へ翻訳した。</p>
-          </div>
-          <div class="step result">
-            <div class="k">Result<span class="jp">成果</span></div>
-            <p>カテゴリー内での第一想起を獲得し、これまで届かなかった新規顧客層への到達を実現。</p>
-          </div>
-        </div>
+    <div class="wkmini">
+      <div class="wk">
+        <span class="cat">学校・教育</span>
+        <div class="nm">学習塾</div>
+        <div class="task">生徒募集／新規事業開発／コーポレートブランディング</div>
+        <div class="cnt">全 10 領域を担当</div>
       </div>
-
-      <div class="case">
-        <div class="ctop">
-          <span class="cno">CASE 02</span>
-          <span class="cind">伝わらない技術力を、選ばれる理由へ</span>
-          <span class="ccat">BtoB / 技術・製造</span>
-        </div>
-        <div class="steps">
-          <div class="step">
-            <div class="k">Issue<span class="jp">課題</span></div>
-            <p>高い技術力が、専門外の意思決定者にうまく伝わらず、比較検討で埋もれてしまっていた。</p>
-          </div>
-          <div class="step">
-            <div class="k">Approach<span class="jp">打ち手</span></div>
-            <p>「価値の翻訳」に徹したブランドムービーを制作。指名検索を促す導線とデジタル運用をセットで設計した。</p>
-          </div>
-          <div class="step result">
-            <div class="k">Result<span class="jp">成果</span></div>
-            <p>商談化率が改善。問い合わせの質が高まり、採用応募の母集団形成にも波及した。</p>
-          </div>
-        </div>
+      <div class="wk">
+        <span class="cat">IT・サービス</span>
+        <div class="nm">SES事業</div>
+        <div class="task">コーポレートブランディング／採用マーケティング</div>
+        <div class="cnt">7 領域を担当</div>
       </div>
-
-      <div class="case">
-        <div class="ctop">
-          <span class="cno">CASE 03</span>
-          <span class="cind">一過性の話題を、継続的に「選ばれる」状態へ</span>
-          <span class="ccat">サービス / エンタメ</span>
-        </div>
-        <div class="steps">
-          <div class="step">
-            <div class="k">Issue<span class="jp">課題</span></div>
-            <p>キャンペーンのたびに話題にはなるが一過性。継続的に選ばれ続ける状態を作れていなかった。</p>
-          </div>
-          <div class="step">
-            <div class="k">Approach<span class="jp">打ち手</span></div>
-            <p>OOH×SNSで都市生活者に反復接触。世界観を一貫設計し、ブランド体験として積み上げた。</p>
-          </div>
-          <div class="step result">
-            <div class="k">Result<span class="jp">成果</span></div>
-            <p>継続的な指名来店を獲得し、自走するファンコミュニティの形成につながった。</p>
-          </div>
-        </div>
+      <div class="wk">
+        <span class="cat">消費財・ブランド</span>
+        <div class="nm">高級スポーツ用品</div>
+        <div class="task">新ブランド・プロダクト開発／マーケティング支援</div>
+        <div class="cnt">6 領域を担当</div>
+      </div>
+      <div class="wk">
+        <span class="cat">金融・カード</span>
+        <div class="nm">カード会社</div>
+        <div class="task">新サービスローンチ／カフェタイアップ施策</div>
+        <div class="cnt">戦略〜メディア〜PR</div>
       </div>
     </div>
-    <div class="cases-note">※ 掲載のケースは構成・表現イメージです。具体的な実績内容は確定後に差し替えます。</div>
-    <div class="morebar"><a class="btn ghost" href="works.html">実績の考え方を見る →</a></div>
+    <div class="morebar"><a class="btn ghost" href="works.html">実績一覧を見る（13件） →</a></div>
   </div>
 </section>
 
