@@ -60,7 +60,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="index.html"><span class="mk">3LYNX</span><span class="ph">ロゴ後で差替</span></a>
+    <a class="logo" href="index.html"><img class="logo-dark" src="assets/logo-navy.png" alt="3LYNX"><img class="logo-light" src="assets/logo-w.png" alt="3LYNX"></a>
     <nav class="navlinks">
       <a href="about.html">ABOUT</a>
       <a href="service.html">SERVICE</a>
@@ -137,7 +137,7 @@
           <div class="errmsg">お問い合わせ内容をご入力ください。</div>
         </div>
         <button type="submit" class="submit">送信する →</button>
-        <p class="privacy">送信いただいた内容は、お問い合わせ対応の目的にのみ利用します。※ 本フォームはデザイン確認用のデモであり、実際の送信は行われません。</p>
+        <p class="privacy">送信いただいた内容は、お問い合わせ対応の目的にのみ利用します。</p>
       </form>
       <div class="thanks" id="thanks">
         <div class="ic">✓</div>
@@ -151,7 +151,7 @@
 <footer>
   <div class="wrap fmain">
     <div>
-      <div class="mk">3LYNX</div>
+      <img class="flogo" src="assets/logo-w.png" alt="3LYNX">
       <p class="fdesc">株式会社3LYNX ／ スリーリンクス。大手の「頭脳」と前線の実行力を一つに——「伝わらない」を「選ばれる」へ変える、実力重視の〈広告連合〉。</p>
     </div>
     <div class="fcol">
@@ -172,7 +172,6 @@
   </div>
   <div class="wrap fbottom">
     <div class="c">© 2026 3LYNX Inc. All Rights Reserved.</div>
-    <div class="ph">ロゴ・装飾画像は後で差し替え</div>
   </div>
 </footer>
 
@@ -190,6 +189,20 @@
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value.trim())){setErr(email,true);ok=false}else setErr(email,false);
     if(!msg.value.trim()){setErr(msg,true);ok=false}else setErr(msg,false);
     if(!ok){var first=form.querySelector('.fgroup.err input,.fgroup.err textarea');if(first)first.focus();return;}
+    var to='yohei.s@3lynx.org';
+    var company=form.company.value.trim();
+    var subject='【お問い合わせ】'+(company?company+' / ':'')+name.value.trim()+' 様';
+    var body=[
+      'お名前：'+name.value.trim(),
+      '会社名：'+company,
+      'メールアドレス：'+email.value.trim(),
+      '電話番号：'+form.tel.value.trim(),
+      'ご相談内容の種類：'+form.type.value,
+      '',
+      '【お問い合わせ内容】',
+      msg.value.trim()
+    ].join('\r\n');
+    window.location.href='mailto:'+to+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     wrap.classList.add('sent');
     thanks.classList.add('show');
   });

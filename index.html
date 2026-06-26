@@ -21,8 +21,10 @@
 .hero-inner{position:relative;z-index:2;width:100%;color:#fff;padding-top:60px}
 .hero .ey{color:#d4ac63;display:flex;align-items:center;gap:14px;margin-bottom:26px}
 .hero .ey::before{content:"";width:40px;height:1px;background:#d4ac63}
-.hero h1{font-family:"Shippori Mincho",serif;font-weight:700;font-size:clamp(34px,4.7vw,64px);line-height:1.28;letter-spacing:.02em;text-shadow:0 2px 40px rgba(0,0,0,.45)}
-.hero h1 .nv{color:#e6c587}
+.hero h1{font-family:"Shippori Mincho",serif;letter-spacing:.02em}
+.hero h1 .top{display:block;font-weight:600;font-size:clamp(20px,2.3vw,28px);letter-spacing:.1em;color:rgba(255,255,255,.92);text-shadow:0 2px 30px rgba(0,0,0,.4)}
+.hero h1 .rule{display:block;width:54px;height:1px;background:linear-gradient(90deg,#e6c587,transparent);margin:11px 0 17px}
+.hero h1 .big{display:block;font-weight:800;font-size:clamp(40px,5.4vw,64px);line-height:1;letter-spacing:.02em;background:linear-gradient(176deg,#f6e3b0 0%,#e6c587 34%,#c79a4d 60%,#f6e3b0 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 22px rgba(216,178,95,.38))}
 .hero .htag{font-family:"Shippori Mincho",serif;font-size:clamp(16px,1.8vw,22px);color:#fff;margin-top:24px;letter-spacing:.04em;display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap}
 .hero .htag .gw{color:#e6c587;font-weight:700;font-size:1.18em;letter-spacing:.06em;text-shadow:0 2px 24px rgba(230,197,135,.35)}
 .hero .htag::before{content:"";width:26px;height:1px;background:rgba(255,255,255,.6)}
@@ -42,15 +44,15 @@
 /* header transparent over hero, solid on scroll */
 header{transition:background .35s,border-color .35s,backdrop-filter .35s}
 header.over-hero{background:transparent;backdrop-filter:none;border-bottom-color:transparent}
-header.over-hero .logo .mk{color:#fff}
-header.over-hero .logo .ph{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.35)}
+header.over-hero .logo .logo-dark{display:none}
+header.over-hero .logo .logo-light{display:block}
 header.over-hero .navlinks a{color:#fff}
 header.over-hero .navlinks a:not(.cbtn)::after{background:#fff}
 header.over-hero .navlinks .cbtn{background:#fff;color:var(--navy)}
 header.over-hero .navlinks .cbtn:hover{background:#f0eee8;color:var(--navy)}
 header.over-hero.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom-color:var(--line)}
-header.over-hero.scrolled .logo .mk{color:var(--navy)}
-header.over-hero.scrolled .logo .ph{color:var(--muted);border-color:var(--line)}
+header.over-hero.scrolled .logo .logo-dark{display:block}
+header.over-hero.scrolled .logo .logo-light{display:none}
 header.over-hero.scrolled .navlinks a{color:var(--ink)}
 header.over-hero.scrolled .navlinks a:hover{color:var(--navy)}
 header.over-hero.scrolled .navlinks a:not(.cbtn)::after{background:var(--navy)}
@@ -166,7 +168,7 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
 
 <header class="over-hero" id="siteHeader">
   <div class="wrap nav">
-    <a class="logo" href="index.html"><span class="mk">3LYNX</span><span class="ph">ロゴ後で差替</span></a>
+    <a class="logo" href="index.html"><img class="logo-dark" src="assets/logo-navy.png" alt="3LYNX"><img class="logo-light" src="assets/logo-w.png" alt="3LYNX"></a>
     <nav class="navlinks">
       <a href="about.html">ABOUT</a>
       <a href="service.html">SERVICE</a>
@@ -182,9 +184,7 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
   <div class="hero-bg"><img src="assets/hero.png" alt="夜明けの湖に立つ人物と山並み"></div>
   <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
-    <span class="ey">実力重視の広告連合 ／ Results-Driven Alliance</span>
-    <h1>大手の<span class="nv">「頭脳」</span>を、<br>本当の価値を、<br>届ける力に。</h1>
-    <p class="htag">前線で勝ち続ける実力重視の<span class="gw">〈広告連合〉</span></p>
+    <h1><span class="top">前線で勝ち続ける実力重視の</span><span class="rule"></span><span class="big">〈広告連合〉</span></h1>
     <p class="lead">良いモノを作っているのに、なぜか市場に響いていない。<br>そのもどかしさを、本物の広告戦略で解消します。</p>
     <div class="hero-cta">
       <a class="btn light solid" href="contact.html">無料で相談する →</a>
@@ -408,7 +408,7 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
 <footer>
   <div class="wrap fmain">
     <div>
-      <div class="mk">3LYNX</div>
+      <img class="flogo" src="assets/logo-w.png" alt="3LYNX">
       <p class="fdesc">株式会社3LYNX ／ スリーリンクス。大手の「頭脳」と<br>前線の実行力を一つに——<br>「伝わらない」を「選ばれる」へ変える、実力重視の〈広告連合〉。</p>
     </div>
     <div class="fcol">
@@ -429,7 +429,6 @@ header.over-hero.scrolled .navlinks .cbtn{background:var(--navy);color:#fff}
   </div>
   <div class="wrap fbottom">
     <div class="c">© 2026 3LYNX Inc. All Rights Reserved.</div>
-    <div class="ph">ロゴ・装飾画像は後で差し替え</div>
   </div>
 </footer>
 

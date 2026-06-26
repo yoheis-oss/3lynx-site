@@ -57,9 +57,9 @@ a{color:inherit}
 /* ---------- header ---------- */
 header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo .mk{font-family:"Outfit",sans-serif;font-weight:600;font-size:24px;letter-spacing:.02em;color:var(--navy)}
-.logo .ph{font-size:9px;font-family:"Outfit";color:var(--muted);border:1px dashed var(--line);padding:3px 6px;letter-spacing:.06em}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img{display:block;height:22px;width:auto}
+.logo .logo-light{display:none}
 .navlinks{display:flex;align-items:center;gap:34px}
 .navlinks a{color:var(--ink);text-decoration:none;font-size:13px;letter-spacing:.04em;transition:color .2s;position:relative}
 .navlinks a:not(.cbtn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:transform .25s}
@@ -97,7 +97,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,25
 /* ---------- footer ---------- */
 footer{background:var(--ink);color:#cfd2d8}
 .fmain{padding:72px 0 40px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
-.fmain .mk{font-family:"Outfit";font-weight:600;font-size:26px;color:#fff;letter-spacing:.02em}
+.fmain .flogo{display:block;height:26px;width:auto}
 .fmain .fdesc{font-size:13px;color:#9b9ea6;margin-top:16px;line-height:1.95;max-width:340px}
 .fmain .fmem{display:flex;gap:22px;margin-top:24px;font-family:"Shippori Mincho",serif;font-size:15px;color:#e8eaee}
 .fcol h4{font-family:"Outfit";font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
